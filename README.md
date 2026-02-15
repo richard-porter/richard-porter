@@ -39,6 +39,15 @@ A public safety scorecard for high-gain AI conversational features. Binary archi
 **If you’re curious about the whole thing** → Start with the [Taller Shell](https://github.com/richard-porter/dimensional-authorship/tree/main/case-study-taller-shell). It’s three novels about mercy and broken things, and the story of one person figuring out how to work with AI without losing himself in the process.
 
 -----
+---
+
+## How These Repos Connect
+
+| Repo | Audience | Mode |
+|------|----------|------|
+| [Frozen Kernel](https://github.com/richard-porter/frozen-kernel) | Builders / Safety researchers | Operational (how it works) |
+| [Field Guide](https://github.com/richard-porter/ai-collaboration-field-guide) | Practitioners / Users | Theoretical (why it matters) |
+| [Dimensional Authorship](https://github.com/richard-porter/dimensional-authorship) | Researchers / Curious readers | Narrative (how it happened) |
 
 ## About
 
