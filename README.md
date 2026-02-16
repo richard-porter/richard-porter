@@ -2,7 +2,7 @@
 
 This is the public work of Richard Porter (pen name) — a non-technical practitioner documenting what happens when humans collaborate with AI, and what goes wrong when nobody’s watching.
 
-Everything here is free, voluntary, and given away. Nothing is sold. Nothing requires technical skill to use.
+Everything here is free, voluntary, and given away. Nothing requires technical skill to use.
 
 -----
 
