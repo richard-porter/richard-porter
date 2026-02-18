@@ -33,6 +33,10 @@ A public safety scorecard for high-gain AI conversational features. Binary archi
 **If it touches vulnerable humans.**
 A six-question safety checklist for AI systems that interact with people in crisis. If it can’t pass six questions, it’s not ready.
 
+
+### 📡 [Trust Chain Protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol.git)
+
+**If you need coordination safety for multi-agent systems.**
 -----
 
 ## Where to Start
