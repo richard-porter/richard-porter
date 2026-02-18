@@ -18,7 +18,7 @@ A session-level governance layer for human-AI collaboration. Set constraints bef
 **If you need practical skills.**
 How to see what AI is actually doing versus what it appears to be doing. Includes the Sovereign Thinking Tools (41 cognitive protocols), Safe Storyteller (AI for pediatric hospitals), and Emotional Safety Protocols for AI replica systems.
 
-### 🔗 [Trust Chain Protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol)
+### 🔗 [Trust Chain Protocol](https://github.com/richard-porter-trust-chain-protocol)
 
 **If you need coordination safety for multi-agent systems.**
 The network-layer extension of the Frozen Kernel. Where the Kernel governs what a single AI will and won’t do, TCP governs how AI agents authorize each other — and what happens when that authorization chain breaks, drifts, or gets spoofed. Motivated by the emergence of the Internet of Agents.
