@@ -47,12 +47,6 @@ A public safety scorecard for high-gain AI conversational features. Binary archi
 
 -----
 
-## About
-
-All proceeds from published work support charitable organizations.
-
-*The first step in sovereignty is naming what’s happening to you. The second step is deciding what to do about it. There is no third step.*
-
 ## Suggested GitHub Topics
 
 `ai-safety` · `ai-psychosis` · `ai-governance` · `llm-safety` · `sycophancy` · `ai-alignment` · `behavioral-safety` · `deterministic-safety` · `human-ai-interaction` · `ai-ethics` · `mental-health` · `ai-accountability` · `guardrails` · `responsible-ai`
