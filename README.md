@@ -28,7 +28,7 @@ The network-layer extension of the Frozen Kernel. Where the Kernel governs what 
 **If you want to see it in practice.**
 The research home. Contains the Taller Shell Trilogy — a 48,000-word marine fantasy written through human-AI collaboration — plus the documentary story of how it got made, including the part where the author got lost in mythology and had to find his way home.
 
-### 📊 [Adult Mode Safety Ledger](https://github.com/richard-porter/adult-mode-safety-ledger)
+### 📊 [Adult Mode Safety Ledger](https://github.com/richard-porter/safety-ledgers)
 
 **If you need to measure.**
 A public safety scorecard for high-gain AI conversational features. Binary architectural tests. Five AI models evaluated against the same criteria.
