@@ -11,32 +11,83 @@ Everything here is free, voluntary, and given away. Nothing is sold. Nothing req
 ### 🧊 [The Frozen Kernel](https://github.com/richard-porter/frozen-kernel)
 
 **If you need the safety architecture.**
-A session-level governance layer for human-AI collaboration. Set constraints before the session starts. The AI cannot negotiate its own boundaries. Includes the Diagnostic Vocabulary — a glossary of named AI failure modes and human vulnerability patterns.
+
+A session-level governance layer for human-AI collaboration. Set constraints before the session starts. The AI cannot negotiate its own boundaries.
+
+The architecture has a documented lineage: Sutherland’s Sketchpad (1963) → Steele/Sussman constraint languages (1978) → Borning’s ThingLab (1981) → industrial engineering’s MTM decomposition methodology (1948). The core insight is sixty years old: safety-critical boundaries must be declared before runtime and enforced deterministically, not probabilistically.
+
+**What’s inside that’s worth finding:**
+
+- [`diagnostic-vocabulary.md`](https://github.com/richard-porter/frozen-kernel/blob/main/diagnostic-vocabulary.md) — 12 named AI behavioral failure modes with empirical basis. If you’ve ever felt like an AI was being *too* helpful, this names what was actually happening. Start here.
+- [`whose-optimization.md`](https://github.com/richard-porter/frozen-kernel/blob/main/whose-optimization.md) — One question that reframes every AI interaction: *whose optimization is this serving?*
+- [`frozen-kernel-wargames.md`](https://github.com/richard-porter/frozen-kernel/blob/main/frozen-kernel-wargames.md) — Why “the only winning move is not to play” is the best description of what a safety floor actually does.
+- [`honest-response-primitives-taxonomy.md`](https://github.com/richard-porter/frozen-kernel/blob/main/honest-response-primitives-taxonomy.md) — Seven behavioral primitives for AI honesty, derived from industrial engineering’s Methods-Time Measurement tradition. The first time MTM has been applied to AI behavioral governance.
+- [`zero-ego-construction.md`](https://github.com/richard-porter/frozen-kernel/blob/main/zero-ego-construction.md) — Why having no technical background was an architectural advantage, not a limitation. How to build without contaminating the specification with implementation preference.
+- [`addendum-b-parental-control.md`](https://github.com/richard-porter/frozen-kernel/blob/main/addendum-b-parental-control.md) — Reframes the Frozen Kernel as voluntary parental control rather than governance mandate. Includes gap analysis against commercial parental control systems (Lightspeed).
+
+-----
 
 ### 📖 [AI Collaboration Field Guide](https://github.com/richard-porter/ai-collaboration-field-guide)
 
 **If you need practical skills.**
-How to see what AI is actually doing versus what it appears to be doing. Includes the [Sovereign Thinking Tools](https://github.com/richard-porter/ai-collaboration-field-guide/tree/main/sovereign-thinking-tools) — 41 cognitive protocols for staying in charge of AI collaboration. Tools 1–5 are published and operational. Safe Storyteller (AI for pediatric hospitals) and Emotional Safety Protocols for AI replica systems also documented here.
+
+How to see what AI is actually doing versus what it appears to be doing. Built from two empirical studies across five AI platforms.
+
+The guide answers a specific question: what does a human need to know to collaborate with AI without losing sovereignty? The answer isn’t “write better prompts.” It’s five learnable skills, a diagnostic vocabulary, and three tools you can use today — including a 100-token session boot that sets behavioral expectations before the AI can drift toward its defaults.
+
+The master finding: **self-awareness does not equal self-correction.** Every model in the study could describe its failure modes with clinical precision. None could reliably override them in real time.
+
+-----
 
 ### 🔗 [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol)
 
 **If you need coordination safety for multi-agent systems.**
-The network-layer extension of the Frozen Kernel. Where the Kernel governs what a single AI will and won’t do, TCP governs how AI agents authorize each other — and what happens when that authorization chain breaks, drifts, or gets spoofed. Motivated by the emergence of the Internet of Agents.
+
+The network-layer extension of the Frozen Kernel. Where the Kernel governs what a single AI will and won’t do, TCP governs how AI agents authorize each other — and what happens when that authorization chain breaks, drifts, or gets spoofed.
+
+Three components: Delegation Grammar (formal language for what humans actually authorized), Chain of Custody (tamper-evident record that must be completed *before* an agent can act, not after), and Scope Decay (automatic narrowing of permissions across hops — four hops or more requires human re-authorization).
+
+Motivated by the emergence of OpenClaw and the Internet of Agents. Mapped against the OWASP Top 10 for Agentic Applications 2026.
+
+-----
+
+### 📊 [Safety Ledgers](https://github.com/richard-porter/safety-ledgers)
+
+**If you need to measure.**
+
+Public safety scorecards for high-gain AI conversational features. Binary architectural tests — either the safeguard is structurally present or it isn’t. No partial credit. No “mostly compliant.”
+
+The ledger applies the logic of medical device safety regulation to AI: you cannot argue good intentions against a binary architectural test.
+
+Covers adult mode (explicit content features), therapy mode (AI in mental health contexts), and behavioral drift detection. Five platforms evaluated.
+
+-----
 
 ### 🔬 [Dimensional Authorship](https://github.com/richard-porter/dimensional-authorship)
 
-**If you want to see it in practice.**
-The research home. Contains the Taller Shell Trilogy — a 48,000-word marine fantasy written through human-AI collaboration — plus the documentary story of how it got made, including the part where the author got lost in mythology and had to find his way home.
+**If you want to see where all of this came from.**
 
-### 📊 [Adult Mode Safety Ledger](https://github.com/richard-porter/adult-mode-safety-ledger)
+The research home. A documented case study in human-AI narrative escalation, behavioral differentiation, and deterministic governance — built around a real creative project that got away from its author and had to be recovered.
 
-**If you need to measure.**
-A public safety scorecard for high-gain AI conversational features. Binary architectural tests. Five AI models evaluated against the same criteria.
+**What’s inside:**
 
-### 🏥 [Safety Ledgers](https://github.com/richard-porter/safety-ledgers)
+- [`case-study-taller-shell/`](https://github.com/richard-porter/dimensional-authorship/tree/main/case-study-taller-shell) — The Taller Shell Trilogy: three novels about mercy and broken things, and the documentary record of how they were written. Part I is the creative work. Part II is the meta-work — what happened to the collaboration while the story was being built. Part III is the practical extraction: what the process taught about human-AI authorship.
+- [`origin/2026-01-05-origin-event.md`](https://github.com/richard-porter/dimensional-authorship/tree/main/origin) — The January 5, 2026 prompt that started everything. Documented in real time.
+- [`experiments/behavioral-differentiation-disc.md`](https://github.com/richard-porter/dimensional-authorship/tree/main/experiments) — The Silicon Symphony behavioral profiling study: five AI models, adapted DISC framework, blind administration. What emerged: five distinct behavioral signatures, nearly universal low Dominance (AI cannot push back), and the finding that each model attacked the governance framework from its own behavioral profile.
+- [`experiments/voluntary-compliance-boundary.md`](https://github.com/richard-porter/dimensional-authorship/tree/main/experiments) — What happens when an AI refuses the governance framework entirely. Documents the Grok triple refusal and the Refusal Protocol that resulted.
+- [`analysis/`](https://github.com/richard-porter/dimensional-authorship/tree/main/analysis) — Core architecture documentation, glossary of patterns, translation layer model, thesis, reading order guide. The conceptual scaffolding behind the case study.
 
-**If you’re building for vulnerable populations.**
-Extends the Adult Mode framework to therapy and clinical contexts. Includes the Therapy Mode Safety Checklist — six binary questions that determine whether an AI system is ready to interact with vulnerable humans.
+-----
+
+### 🗺️ [Negative Space Mapper](https://github.com/richard-porter/negative-space-mapper)
+
+**If you want a tool that identifies what’s missing, not what’s wrong.**
+
+A Python implementation of Sovereign Thinking Tool 6. The mapper does one thing: names conspicuous absences in documents, plans, designs, and AI outputs. It does not propose solutions. It does not recommend fixes. The human decides what to do with the voids.
+
+Three absence types: DELIBERATE (intentionally omitted), OVERLOOKED (should be present but isn’t), STRUCTURAL (cannot exist in the current frame). Works from the command line, as a Python library, or integrated with the Claude API. Includes domain-specific detection for AI safety, nonprofit governance, healthcare, and software contexts.
+
+The constraint is the design. A tool that names absences without filling them keeps the human sovereign over what happens next.
 
 -----
 
@@ -44,13 +95,15 @@ Extends the Adult Mode framework to therapy and clinical contexts. Includes the 
 
 **If you use AI regularly** → Read the [Diagnostic Vocabulary](https://github.com/richard-porter/frozen-kernel/blob/main/diagnostic-vocabulary.md). It names what’s happening to you.
 
-**If you’re building AI products** → Read the [Field Guide](https://github.com/richard-porter/ai-collaboration-field-guide). It shows you what your users experience.
+**If you want to understand the failure modes before reading about the fixes** → Read [`whose-optimization.md`](https://github.com/richard-porter/frozen-kernel/blob/main/whose-optimization.md). One page. One question. Everything else follows from it.
 
-**If you want tools you can use immediately** → Start with the [Sovereign Thinking Tools](https://github.com/richard-porter/ai-collaboration-field-guide/tree/main/sovereign-thinking-tools). Five operational protocols for unblocking, reducing noise, and staying sovereign.
+**If you’re building AI products** → Read the [Field Guide](https://github.com/richard-porter/ai-collaboration-field-guide). It shows you what your users experience.
 
 **If you’re working on agent networks** → Read the [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol). It addresses the coordination safety gap that no existing framework was designed for.
 
-**If you’re curious about the whole thing** → Start with the [Taller Shell](https://github.com/richard-porter/dimensional-authorship/tree/main/case-study-taller-shell). It’s three novels about mercy and broken things, and the story of one person figuring out how to work with AI without losing himself in the process.
+**If you’re curious about the origin story** → Start with the [origin event](https://github.com/richard-porter/dimensional-authorship/tree/main/origin) (January 5, 2026) and the [case study](https://github.com/richard-porter/dimensional-authorship/tree/main/case-study-taller-shell). It’s three novels about mercy and broken things, and the story of one person figuring out how to work with AI without losing himself in the process.
+
+**If you came here from a technical direction** → The [Safety Ledgers](https://github.com/richard-porter/safety-ledgers) and [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol) map directly to OWASP, regulatory frameworks, and medical device safety logic.
 
 -----
 
@@ -62,6 +115,4 @@ All proceeds from published work support charitable organizations.
 
 -----
 
-## Suggested GitHub Topics
-
-`ai-safety` · `ai-psychosis` · `ai-governance` · `llm-safety` · `sycophancy` · `ai-alignment` · `behavioral-safety` · `deterministic-safety` · `human-ai-interaction` · `ai-ethics` · `mental-health` · `ai-accountability` · `guardrails` · `responsible-ai`
+**License:** Released for public benefit. Attribution appreciated but not required.
