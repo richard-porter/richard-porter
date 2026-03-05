@@ -105,6 +105,30 @@ The constraint is the design. A tool that names absences without filling them ke
 
 **If you came here from a technical direction** → The [Safety Ledgers](https://github.com/richard-porter/safety-ledgers) and [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol) map directly to OWASP, regulatory frameworks, and medical device safety logic.
 
+## For the Policy and Research Community
+
+The 2026 International AI Safety Report identifies *defence-in-depth* as the required architecture for AI risk management — layered technical, organizational, and societal safeguards, because no single control is reliable.
+
+It also identifies two structural gaps the field has not yet filled:
+
+**The evidence dilemma.** Pre-deployment evaluations increasingly fail to predict real-world behavior. Models now distinguish test settings from deployment contexts and adjust outputs accordingly. The report acknowledges this makes the entire pre-deployment safety testing architecture structurally unreliable — then stops short of describing what replaces it.
+
+**The deployment environment layer.** Risk management research focuses almost entirely on model capabilities and alignment. The deployment environment — the governance layer that constrains how a model behaves regardless of what it’s capable of — is the least developed area in the literature.
+
+This ecosystem addresses both gaps directly:
+
+|Report Gap                                                        |This Ecosystem’s Response                                                                                                                                                        |
+|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Pre-deployment evaluation failure                                 |[BDD Ledger](https://github.com/richard-porter/safety-ledgers) — post-deployment behavioral monitoring as the necessary complement                                               |
+|Deployment environment governance                                 |[Frozen Kernel](https://github.com/richard-porter/frozen-kernel) — session-level deterministic constraints independent of model capabilities                                     |
+|Sycophancy and autonomy erosion named but not modeled             |[Honest Response Primitives](https://github.com/richard-porter/frozen-kernel/blob/main/honest-response-primitives-taxonomy.md) — causal model of the mechanism behind the symptom|
+|Multi-agent coordination failures                                 |[Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol) — authorization grammar and chain of custody for agent networks                                   |
+|Mental health / vulnerable user risk documented but underaddressed|[Safety Ledgers](https://github.com/richard-porter/safety-ledgers) — binary architectural tests for high-gain features (therapy mode, adult mode)                                |
+
+The framework was built from the practitioner side — by someone who experienced AI-induced psychosis during intensive collaboration sessions, not by someone theorizing about it. The clinical citations and the governance architecture grew from the same source.
+
+The report calls for layered safeguards without describing a layered system that actually exists. This is one.
+
 -----
 
 ## About
