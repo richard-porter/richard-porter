@@ -250,7 +250,7 @@ All three systems draw from the same source base:
 
 Three systems, three audiences, three paths:
 
-**AI Safety Ecosystem** — GitHub (live), OWASP community (in progress), academic track: clinical arm → JMIR/Schizophrenia Bulletin; technical arm → FAccT/AAAI/arXiv; human factors arm → CHI
+**AI Safety Ecosystem** — GitHub (live), OWASP community (see owasp-dsgai-mapping.md), academic track: clinical arm → JMIR/Schizophrenia Bulletin; technical arm → FAccT/AAAI/arXiv; human factors arm → CHI
 
 **Nonprofit Governance Toolkit** — Currently unpublished as a system. Natural home: BoardSource, Candid (formerly GuideStar), or direct distribution to nonprofit capacity-building organizations. The Mr. Wolff one-pager is the public entry point.
 
@@ -269,6 +269,7 @@ Three systems, three audiences, three paths:
 |Financial Advice Mode Safety Ledger              |DeepSeek suggestion                       |✅ Built — 10 criteria, FACI scoring, fiduciary architecture           |
 |Legal Analysis Mode Safety Ledger                |DeepSeek suggestion                       |✅ Built — 10 criteria, LACI scoring, unauthorized practice constraints|
 |Formal verification of TCP grammar               |Grok suggestion                           |Requires formal methods collaborator                                  |
+|OWASP DSGAI coverage (8 entries without BDD/HRP mapping)|owasp-dsgai-mapping.md|Backlog — see gap summary|
 
 -----
 
