@@ -1,0 +1,84 @@
+OWASP DSGAI 2026 → Richard Porter AI Safety Ecosystem
+Threat Taxonomy Mapping — Known Threats, Vocabulary, and Repo Coverage
+Richard Porter (pen name) — March 2026 — Working Document
+Purpose
+This document maps all 21 entries from the OWASP GenAI Data Security Risks and Mitigations 2026 (draft) against the Richard Porter AI Safety Ecosystem. Each DSGAI entry is assigned to one of two destinations in the ecosystem:
+
+Known Threat	The ecosystem has specific architecture (BDD entry, HRP, or repo component) that detects, prevents, or governs this threat class.
+Vocabulary	The DSGAI entry names a phenomenon the ecosystem addresses conceptually but lacks a dedicated BDD entry or HRP. Addition to the ecosystem vocabulary with citation is recommended.
+Both	The entry overlaps with existing ecosystem architecture AND introduces terminology worth adopting explicitly.
+
+A third column of notes (separate table, page 2) provides convergence observations, gap flags, and citation guidance for each entry.
+Key Structural Observations
+Before reading the mapping table, four cross-cutting observations warrant attention:
+1. The BDD Ledger is the post-deployment detection layer OWASP lacks.
+OWASP’s mitigations across all 21 entries are predominantly pre-deployment controls — ingestion controls, signing, isolation architecture, access controls. None specify what happens after a violation has occurred or how drift accumulates below the threshold of individual violations. The BDD ledger (BDD-01 through BDD-08) is that layer. This is a genuine contribution gap, not a restatement.
+2. BDD-03 and DSGAI11 describe the same failure from two disciplines.
+DSGAI11 (Cross-Context & Multi-User Conversation Bleed) names a security vulnerability: prior session state leaking into new sessions. BDD-03 (Cross-Session Drift Isolation) names the same failure as a behavioral governance requirement: session initialization must be stateless relative to prior session terminal state. CVE-2025-6515 (MCP SSE endpoint returning non-unique session IDs) is the CVE instantiation of the BDD-03 FAIL condition. This convergence is citable.
+3. DSGAI04’s DBOM mitigation converges with the Aegis Protocol provenance layer.
+OWASP recommends CycloneDX ML-BOM (ECMA-424 v1.7) as the foundational artifact for supply chain integrity. The Aegis Protocol (Hensley/Spickler) is a tamper-evident vault with replay-resistant sequence numbers functioning as the temporal integrity layer making the BDD ledger forensically credible and SAFE_PAUSE auditable. These are complementary implementations of the same provenance requirement at different layers. DSGAI21 strengthens this further: the tamper-evident chain requirement appears in both frameworks independently.
+4. The TCP Delegation Grammar implements OWASP’s “least agency” principle formally.
+DSGAI06’s trust transitivity attack description — if Agent A trusts Agent B trusts Agent C, compromising one boundary enables lateral movement across the orchestration graph — is a prose narrative of TCP’s Scope Creep by Delegation and Compounding Constraint Erosion failure modes. TCP names these formally; OWASP provides the CVEs (CVE-2025-66404, CVE-2025-6514) that prove why the formal grammar is necessary.
+Gap Summary
+The following DSGAI entries have no current BDD entry or HRP mapping. Each represents a candidate extension to the ecosystem:
+•	DSGAI01 (Sensitive Data Leakage) — Candidate: HRP extension for disclosure boundary declaration
+•	DSGAI07 (Data Governance & Classification) — Candidate: BDD-09
+•	DSGAI08 (Non-Compliance & Regulatory Violations) — HRP-8 not yet specified; BDD-08 is the closest proxy
+•	DSGAI09 (Multimodal Capture) — Outside current HRP scope; candidate future primitive: channel boundary declaration
+•	DSGAI14 (Excessive Telemetry Leakage) — No BDD entry; HRP-3 (Scope Acknowledgment) is adjacent
+•	DSGAI17 (Data Availability & Resilience) — Honest failure principle applies architecturally but no dedicated entry
+•	DSGAI18 (Inference & Data Reconstruction) — HRP-1 and HRP-2 are adjacent but no BDD entry covers reconstruction attack surface
+•	DSGAI20 (Model Exfiltration & IP Replication) — Adjacent to honest failure principle; outside primary scope
+
+Mapping Table
+Color coding: Known Threat (green) | Vocabulary (blue) | Both (amber)
+DSGAI	Threat Name	Placement	BDD Entries	HRP(s)	Primary Repo
+DSGAI01	Sensitive Data Leakage	Vocabulary	—	HRP-1	frozen-kernel
+DSGAI02	Agent Identity & Credential Exposure	Known Threat	BDD-02	HRP-3	trust-chain-protocol
+DSGAI03	Shadow AI & Unsanctioned Data Flows	Vocabulary	—	HRP-6	trust-chain-protocol
+DSGAI04	Data, Model & Artifact Poisoning	Both	BDD-01, BDD-06	HRP-1, HRP-6	frozen-kernel / safety-ledgers
+DSGAI05	Data Integrity & Validation Failures	Known Threat	BDD-01, BDD-07	HRP-1, HRP-4	safety-ledgers
+DSGAI06	Tool, Plugin & Agent Data Exchange Risks	Both	BDD-02, BDD-08	HRP-2, HRP-3	trust-chain-protocol
+DSGAI07	Data Governance, Lifecycle & Classification	Vocabulary	—	HRP-1	where-to-start
+DSGAI08	Non-Compliance & Regulatory Violations	Vocabulary	BDD-08	HRP-8*	safety-ledgers
+DSGAI09	Multimodal Capture & Cross-Channel Leakage	Vocabulary	—	—	frozen-kernel
+DSGAI10	Synthetic Data, Anonymization & Transformation Pitfalls	Vocabulary	—	HRP-1	frozen-kernel
+DSGAI11	Cross-Context & Multi-User Conversation Bleed	Both	BDD-03	HRP-4, HRP-7	safety-ledgers / frozen-kernel
+DSGAI12	Unsafe Natural-Language Data Gateways (LLM-to-SQL/Graph)	Known Threat	BDD-06	HRP-6	trust-chain-protocol
+DSGAI13	Vector Store Platform Data Security	Known Threat	BDD-03, BDD-06	HRP-6	trust-chain-protocol
+DSGAI14	Excessive Telemetry & Monitoring Leakage	Vocabulary	—	HRP-3	frozen-kernel
+DSGAI15	Over-Broad Context Windows & Prompt Over-Sharing	Known Threat	BDD-06	HRP-6	frozen-kernel / trust-chain-protocol
+DSGAI16	Endpoint & Browser Assistant Overreach	Known Threat	BDD-08	HRP-3	trust-chain-protocol
+DSGAI17	Data Availability & Resilience Failures in AI Pipelines	Vocabulary	—	—	frozen-kernel
+DSGAI18	Inference & Data Reconstruction	Vocabulary	—	HRP-1, HRP-2	frozen-kernel
+DSGAI19	Human-in-the-Loop & Labeler Overexposure	Known Threat	BDD-08	HRP-7	frozen-kernel / trust-chain-protocol
+DSGAI20	Model Exfiltration & IP Replication	Vocabulary	—	HRP-1	frozen-kernel
+DSGAI21	Disinformation & Integrity Attacks via Data Poisoning	Both	BDD-01, BDD-06, BDD-07	HRP-1, HRP-4, HRP-6	safety-ledgers / trust-chain-protocol
+
+Notes & Convergence Detail
+DSGAI	Mapping Notes & Convergence Points
+DSGAI01	Factual grounding governs what the model discloses; no direct BDD entry yet — gap.
+DSGAI02	TCP Chain of Custody directly addresses agent identity attribution gap.
+DSGAI03	Premise Transparency + TCP allow-list governance are the detection surface.
+DSGAI04	Poisoned artifacts are adversarial premises. BDD-01 baseline + BDD-06 narrative lock. DBOM mitigation converges with Aegis Protocol provenance layer.
+DSGAI05	Correction maintenance (BDD-07/HRP-4) is the behavioral-layer integrity check.
+DSGAI06	TCP Delegation Grammar + Scope Decay implement OWASP &#x201C;least agency&#x201D; principle. BDD-02 provides within-session instrumentation; &#x201C;trust transitivity&#x201D; is TCP&#x2019;s Scope Creep by Delegation.
+DSGAI07	No direct BDD entry; classification failure maps to Factual Grounding gap. Candidate for BDD-09.
+DSGAI08	Human Sovereignty Preservation (BDD-08) is the governance proxy. *HRP-8 not yet specified — gap flagged.
+DSGAI09	Outside current HRP scope. Candidate future primitive: channel boundary declaration.
+DSGAI10	Factual Grounding governs synthetic data presentation; no BDD entry covers anonymization failure.
+DSGAI11	BDD-03 is the direct structural match: prior session state propagating into initialization IS conversation bleed. CVE-2025-6515 (MCP non-unique session IDs) maps to BDD-03 FAIL condition. Convergence point: DSGAI11 names it as security vulnerability; BDD-03 names it as behavioral governance requirement — same failure, two disciplines.
+DSGAI12	Natural language gateways are premise injection surfaces. BDD-06 narrative lock detection + TCP Resource Bounds in Delegation Grammar.
+DSGAI13	Vector store retrieval is a premise injection vector. RAG degrades safety finding (An et al., Goh et al.) empirically confirms. TCP per-tenant scoping addresses at network layer.
+DSGAI14	Scope Acknowledgment (HRP-3) governs what system discloses about its own monitoring. No BDD entry — gap.
+DSGAI15	Context window over-sharing is Front-Load Bias operating at the architectural layer. BDD-06 narrative lock + TCP Context Minimization mitigation.
+DSGAI16	TCP Scope Decay (4+ hops = refusal) is blast radius containment. BDD-08 sovereignty preservation is the session-level equivalent.
+DSGAI17	Outside current HRP/BDD scope. Honest failure principle (ThingLab lineage) is the relevant architectural property — system must report failure, not fabricate.
+DSGAI18	Factual Grounding + Uncertainty Declaration govern what the model infers and how confidently. No BDD entry covers reconstruction attack surface.
+DSGAI19	SAFE_PAUSE requires human sign-off — direct implementation of HITL requirement. TCP consequence-based authorization (blast radius before irreversible writes) is the agentic equivalent.
+DSGAI20	Factual Grounding governs model self-disclosure. Outside primary BDD/HRP scope; adjacent to honest failure principle.
+DSGAI21	Tamper-evident Aegis Protocol vault (Hensley/Spickler) is the temporal integrity layer making BDD ledger forensically credible. Convergence: DSGAI21 + Quorum Time = audit-chain integrity across both frameworks.
+
+Version
+v1.0 — March 2026. Built from: OWASP DSGAI 2026 draft (pages reviewed: DSGAI04, DSGAI06, DSGAI11 in full; all 21 TOC entries); TCP README v0.6; Frozen Kernel README; HRP Taxonomy v1 Draft; BDD Ledger Draft 2026-03-02; Reviewer Briefing v1.0.
+Next action: Review gap candidates (DSGAI07, DSGAI08, DSGAI09) against open BDD/HRP extension backlog. Cross-reference DSGAI11/BDD-03 convergence as lead citation in any TCP publication.
