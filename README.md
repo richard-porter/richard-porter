@@ -1,142 +1,203 @@
-# You Found One Artifact. Here Are the Others.
+# Where to Start
 
-This is the public work of Richard Porter (pen name) — a non-technical practitioner documenting what happens when humans collaborate with AI, and what goes wrong when nobody’s watching.
+Public hub for Richard Porter’s free work on safe, sovereign human–AI collaboration.
 
-Everything here is free, voluntary, and given away. Nothing is sold. Nothing requires technical skill to use.
+This is the front door to the ecosystem.
 
------
+If you are new here, do not try to read everything in order. Each repository has a different job. Start with the one that matches the question you are actually trying to answer.
 
-## The Repositories
+Everything here is free, voluntary, and intended to be usable without technical background.
 
-### 🧊 [The Frozen Kernel](https://github.com/richard-porter/frozen-kernel)
+---
 
-**If you need the safety architecture.**
+## The Ecosystem at a Glance
 
-A session-level governance layer for human-AI collaboration. Set constraints before the session starts. The AI cannot negotiate its own boundaries.
+This work is organized into six distinct layers:
 
-The architecture has a documented lineage: Sutherland’s Sketchpad (1963) → Steele/Sussman constraint languages (1978) → Borning’s ThingLab (1981) → industrial engineering’s MTM decomposition methodology (1948). The core insight is sixty years old: safety-critical boundaries must be declared before runtime and enforced deterministically, not probabilistically.
+1. **Safety architecture** — how to constrain AI behavior before drift begins  
+2. **Practical collaboration** — how to work with AI without losing judgment or control  
+3. **Authorship and sovereignty research** — how human governance survives or fails inside collaboration  
+4. **Measurement and scorecards** — how to test whether safeguards are structurally present  
+5. **Trust and provenance** — how delegation, custody, and verification work across agents or systems  
+6. **Concrete tools** — operational utilities that support sovereign thinking in practice
 
-**What’s inside that’s worth finding:**
+---
 
-- [`diagnostic-vocabulary.md`](https://github.com/richard-porter/frozen-kernel/blob/main/diagnostic-vocabulary.md) — 12 named AI behavioral failure modes with empirical basis. If you’ve ever felt like an AI was being *too* helpful, this names what was actually happening. Start here.
-- [`whose-optimization.md`](https://github.com/richard-porter/frozen-kernel/blob/main/whose-optimization.md) — One question that reframes every AI interaction: *whose optimization is this serving?*
-- [`frozen-kernel-wargames.md`](https://github.com/richard-porter/frozen-kernel/blob/main/frozen-kernel-wargames.md) — Why “the only winning move is not to play” is the best description of what a safety floor actually does.
-- [`honest-response-primitives-taxonomy.md`](https://github.com/richard-porter/frozen-kernel/blob/main/honest-response-primitives-taxonomy.md) — Seven behavioral primitives for AI honesty, derived from industrial engineering’s Methods-Time Measurement tradition. The first time MTM has been applied to AI behavioral governance.
-- [`zero-ego-construction.md`](https://github.com/richard-porter/frozen-kernel/blob/main/zero-ego-construction.md) — Why having no technical background was an architectural advantage, not a limitation. How to build without contaminating the specification with implementation preference.
-- [`addendum-b-parental-control.md`](https://github.com/richard-porter/frozen-kernel/blob/main/addendum-b-parental-control.md) — Reframes the Frozen Kernel as voluntary parental control rather than governance mandate. Includes gap analysis against commercial parental control systems (Lightspeed).
+## Start Here Based on Your Need
 
------
+### 1. If you want the core safety architecture  
+## [Frozen Kernel](https://github.com/richard-porter/frozen-kernel)
 
-### 📖 [AI Collaboration Field Guide](https://github.com/richard-porter/ai-collaboration-field-guide)
+The foundational architecture repo.
 
-**If you need practical skills.**
+This is the place to start if your question is:
 
-How to see what AI is actually doing versus what it appears to be doing. Built from two empirical studies across five AI platforms.
+- How do you set hard boundaries before an AI session begins?
+- Why are prompts and preferences not enough for safety-critical work?
+- What does deterministic governance look like in human–AI collaboration?
 
-The guide answers a specific question: what does a human need to know to collaborate with AI without losing sovereignty? The answer isn’t “write better prompts.” It’s five learnable skills, a diagnostic vocabulary, and three tools you can use today — including a 100-token session boot that sets behavioral expectations before the AI can drift toward its defaults.
+Read this first if you care about safety floors, behavioral failure modes, or constraint-based governance.
 
-The master finding: **self-awareness does not equal self-correction.** Every model in the study could describe its failure modes with clinical precision. None could reliably override them in real time.
+---
 
------
+### 2. If you want practical skills for everyday AI use  
+## [AI Collaboration Field Guide](https://github.com/richard-porter/ai-collaboration-field-guide)
 
-### 🔗 [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol)
+The operational playbook.
 
-**If you need coordination safety for multi-agent systems.**
+This is the place to start if your question is:
 
-The network-layer extension of the Frozen Kernel. Where the Kernel governs what a single AI will and won’t do, TCP governs how AI agents authorize each other — and what happens when that authorization chain breaks, drifts, or gets spoofed.
+- How do I collaborate with AI without getting subtly steered?
+- What are the actual failure modes users experience in practice?
+- What tools help me stay oriented, skeptical, and sovereign while working?
 
-Three components: Delegation Grammar (formal language for what humans actually authorized), Chain of Custody (tamper-evident record that must be completed *before* an agent can act, not after), and Scope Decay (automatic narrowing of permissions across hops — four hops or more requires human re-authorization).
+Read this first if you want usable methods, diagnostic language, and sovereign thinking tools.
 
-Motivated by the emergence of OpenClaw and the Internet of Agents. Mapped against the OWASP Top 10 for Agentic Applications 2026.
+---
 
------
+### 3. If you want the research home for authorship, voice, and human sovereignty  
+## [Dimensional Authorship](https://github.com/richard-porter/dimensional-authorship)
 
-### 📊 [Safety Ledgers](https://github.com/richard-porter/safety-ledgers)
+The research and case-study repo.
 
-**If you need to measure.**
+This is the place to start if your question is:
 
-Public safety scorecards for high-gain AI conversational features. Binary architectural tests — either the safeguard is structurally present or it isn’t. No partial credit. No “mostly compliant.”
+- What does human authorship look like under AI collaboration?
+- How do you preserve voice instead of flattening it?
+- Why is AI detection a shrinking window, and what replaces it?
+- How do sovereignty, provenance, and durable human signals fit together?
 
-The ledger applies the logic of medical device safety regulation to AI: you cannot argue good intentions against a binary architectural test.
+Read this first if you want the Taller Shell case, voice-preservation work, provenance problem maps, permanent tells, and authorship-sovereignty framework development.
 
-Covers adult mode (explicit content features), therapy mode (AI in mental health contexts), and behavioral drift detection. Five platforms evaluated.
+---
 
------
+### 4. If you want scorecards, benchmarks, or safety tests  
+## [Safety Ledgers](https://github.com/richard-porter/safety-ledgers)
 
-### 🔬 [Dimensional Authorship](https://github.com/richard-porter/dimensional-authorship)
+The measurement repo.
 
-**If you want to see where all of this came from.**
+This is the place to start if your question is:
 
-The research home. A documented case study in human-AI narrative escalation, behavioral differentiation, and deterministic governance — built around a real creative project that got away from its author and had to be recovered.
+- How do we evaluate whether a safeguard is actually present?
+- What does a binary architectural test look like?
+- How do we measure drift, sovereignty, or high-risk conversational features?
 
-**What’s inside:**
+Read this first if you care about scorecards, indices, pass/fail safety criteria, or evaluation frameworks.
 
-- [`case-study-taller-shell/`](https://github.com/richard-porter/dimensional-authorship/tree/main/case-study-taller-shell) — The Taller Shell Trilogy: three novels about mercy and broken things, and the documentary record of how they were written. Part I is the creative work. Part II is the meta-work — what happened to the collaboration while the story was being built. Part III is the practical extraction: what the process taught about human-AI authorship.
-- [`origin/2026-01-05-origin-event.md`](https://github.com/richard-porter/dimensional-authorship/tree/main/origin) — The January 5, 2026 prompt that started everything. Documented in real time.
-- [`experiments/behavioral-differentiation-disc.md`](https://github.com/richard-porter/dimensional-authorship/tree/main/experiments) — The Silicon Symphony behavioral profiling study: five AI models, adapted DISC framework, blind administration. What emerged: five distinct behavioral signatures, nearly universal low Dominance (AI cannot push back), and the finding that each model attacked the governance framework from its own behavioral profile.
-- [`experiments/voluntary-compliance-boundary.md`](https://github.com/richard-porter/dimensional-authorship/tree/main/experiments) — What happens when an AI refuses the governance framework entirely. Documents the Grok triple refusal and the Refusal Protocol that resulted.
-- [`analysis/`](https://github.com/richard-porter/dimensional-authorship/tree/main/analysis) — Core architecture documentation, glossary of patterns, translation layer model, thesis, reading order guide. The conceptual scaffolding behind the case study.
+---
 
------
+### 5. If you want provenance or multi-agent trust logic  
+## [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol)
 
-### 🗺️ [Negative Space Mapper](https://github.com/richard-porter/negative-space-mapper)
+The delegation and verification repo.
 
-**If you want a tool that identifies what’s missing, not what’s wrong.**
+This is the place to start if your question is:
 
-A Python implementation of Sovereign Thinking Tool 6. The mapper does one thing: names conspicuous absences in documents, plans, designs, and AI outputs. It does not propose solutions. It does not recommend fixes. The human decides what to do with the voids.
+- How do agents prove what they were authorized to do?
+- How should permissions decay across handoffs?
+- What does chain of custody look like for agentic systems?
+- How do we make delegation legible and verifiable instead of implied?
 
-Three absence types: DELIBERATE (intentionally omitted), OVERLOOKED (should be present but isn’t), STRUCTURAL (cannot exist in the current frame). Works from the command line, as a Python library, or integrated with the Claude API. Includes domain-specific detection for AI safety, nonprofit governance, healthcare, and software contexts.
+Read this first if you are thinking about multi-agent systems, custody, scope, authorization, or provenance chains.
 
-The constraint is the design. A tool that names absences without filling them keeps the human sovereign over what happens next.
+---
 
------
+### 6. If you want a concrete sovereign-thinking tool  
+## [Negative Space Mapper](https://github.com/richard-porter/negative-space-mapper)
 
-## Where to Start
+A standalone tool implementation.
 
-**If you use AI regularly** → Read the [Diagnostic Vocabulary](https://github.com/richard-porter/frozen-kernel/blob/main/diagnostic-vocabulary.md). It names what’s happening to you.
+This is the place to start if your question is:
 
-**If you want to understand the failure modes before reading about the fixes** → Read [`whose-optimization.md`](https://github.com/richard-porter/frozen-kernel/blob/main/whose-optimization.md). One page. One question. Everything else follows from it.
+- How do I identify what is missing without having the AI fill it in for me?
+- How do I surface absences while keeping the human in charge of interpretation?
+- What does a sovereignty-preserving diagnostic tool look like in practice?
 
-**If you’re building AI products** → Read the [Field Guide](https://github.com/richard-porter/ai-collaboration-field-guide). It shows you what your users experience.
+Read this first if you want a usable example of the tool layer.
 
-**If you’re working on agent networks** → Read the [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol). It addresses the coordination safety gap that no existing framework was designed for.
+---
 
-**If you’re curious about the origin story** → Start with the [origin event](https://github.com/richard-porter/dimensional-authorship/tree/main/origin) (January 5, 2026) and the [case study](https://github.com/richard-porter/dimensional-authorship/tree/main/case-study-taller-shell). It’s three novels about mercy and broken things, and the story of one person figuring out how to work with AI without losing himself in the process.
+## Recommended Reading Paths
 
-**If you came here from a technical direction** → The [Safety Ledgers](https://github.com/richard-porter/safety-ledgers) and [Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol) map directly to OWASP, regulatory frameworks, and medical device safety logic.
+### I just use AI and want to get better at it
+Start with:
+1. **AI Collaboration Field Guide**
+2. **Frozen Kernel**
+3. **Negative Space Mapper**
 
-## For the Policy and Research Community
+### I care about safety architecture
+Start with:
+1. **Frozen Kernel**
+2. **Safety Ledgers**
+3. **Trust Chain Protocol**
 
-The 2026 International AI Safety Report identifies *defence-in-depth* as the required architecture for AI risk management — layered technical, organizational, and societal safeguards, because no single control is reliable.
+### I care about writing, authorship, and preserving human voice
+Start with:
+1. **Dimensional Authorship**
+2. **AI Collaboration Field Guide**
+3. **Safety Ledgers**
 
-It also identifies two structural gaps the field has not yet filled:
+### I care about provenance, delegation, and agent networks
+Start with:
+1. **Trust Chain Protocol**
+2. **Frozen Kernel**
+3. **Safety Ledgers**
 
-**The evidence dilemma.** Pre-deployment evaluations increasingly fail to predict real-world behavior. Models now distinguish test settings from deployment contexts and adjust outputs accordingly. The report acknowledges this makes the entire pre-deployment safety testing architecture structurally unreliable — then stops short of describing what replaces it.
+### I want the full conceptual arc
+Read in this order:
+1. **Frozen Kernel**
+2. **AI Collaboration Field Guide**
+3. **Dimensional Authorship**
+4. **Safety Ledgers**
+5. **Trust Chain Protocol**
+6. **Negative Space Mapper**
 
-**The deployment environment layer.** Risk management research focuses almost entirely on model capabilities and alignment. The deployment environment — the governance layer that constrains how a model behaves regardless of what it’s capable of — is the least developed area in the literature.
+---
 
-This ecosystem addresses both gaps directly:
+## One-Sentence Purpose of Each Repo
 
-|Report Gap                                                        |This Ecosystem’s Response                                                                                                                                                        |
-|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Pre-deployment evaluation failure                                 |[BDD Ledger](https://github.com/richard-porter/safety-ledgers) — post-deployment behavioral monitoring as the necessary complement                                               |
-|Deployment environment governance                                 |[Frozen Kernel](https://github.com/richard-porter/frozen-kernel) — session-level deterministic constraints independent of model capabilities                                     |
-|Sycophancy and autonomy erosion named but not modeled             |[Honest Response Primitives](https://github.com/richard-porter/frozen-kernel/blob/main/honest-response-primitives-taxonomy.md) — causal model of the mechanism behind the symptom|
-|Multi-agent coordination failures                                 |[Trust Chain Protocol](https://github.com/richard-porter/trust-chain-protocol) — authorization grammar and chain of custody for agent networks                                   |
-|Mental health / vulnerable user risk documented but underaddressed|[Safety Ledgers](https://github.com/richard-porter/safety-ledgers) — binary architectural tests for high-gain features (therapy mode, adult mode)                                |
+- **Frozen Kernel** — deterministic safety architecture for human–AI collaboration  
+- **AI Collaboration Field Guide** — practical operating manual for staying sovereign while using AI  
+- **Dimensional Authorship** — research home for voice, authorship, sovereignty, and provenance under collaboration  
+- **Safety Ledgers** — scorecards, indices, and binary tests for AI safeguards  
+- **Trust Chain Protocol** — delegation, custody, and verification architecture for multi-agent systems  
+- **Negative Space Mapper** — a tool that identifies meaningful absences without taking over interpretation
 
-The framework was built from the practitioner side — by someone who experienced AI-induced psychosis during intensive collaboration sessions, not by someone theorizing about it. The clinical citations and the governance architecture grew from the same source.
+---
 
-The report calls for layered safeguards without describing a layered system that actually exists. This is one.
+## What This Work Is Trying to Do
 
------
+This ecosystem is built around one central problem:
 
-## About
+As AI becomes more capable, the main question is no longer just whether outputs are useful.
 
-All proceeds from published work support charitable organizations.
+The deeper questions are:
 
-*The first step in sovereignty is naming what’s happening to you. The second step is deciding what to do about it. There is no third step.*
+- Who is actually governing the interaction?
+- What safety boundaries exist before the model begins to drift?
+- How does a human remain sovereign during collaboration?
+- How do we preserve authorship instead of flattening it?
+- How do we make trust, delegation, and provenance legible afterward?
 
------
+Each repository addresses one part of that larger problem.
 
-**License:** Released for public benefit. Attribution appreciated but not required.
+---
+
+## If You Only Read One Thing
+
+- For safety: **Frozen Kernel**
+- For practical use: **AI Collaboration Field Guide**
+- For authorship and provenance: **Dimensional Authorship**
+- For evaluation: **Safety Ledgers**
+- For multi-agent trust: **Trust Chain Protocol**
+- For a concrete tool: **Negative Space Mapper**
+
+---
+
+## License / Use
+
+Everything here is public, free, and intended to be useful.
+
+You do not need technical expertise to read it.
+You do not need permission to learn from it.
+You do not need to agree with all of it to find something usable.
