@@ -54,20 +54,23 @@ This is the place to start if your question is:
 Read this first if you want usable methods, diagnostic language, and sovereign thinking tools.
 
 ---
-
-### 3. If you want the research home for authorship, voice, and human sovereignty  
-## [Dimensional Authorship](https://github.com/richard-porter/dimensional-authorship)
-
+### 3. If you want the research home for authorship, voice, and human sovereignty
+Dimensional Authorship
 The research and case-study repo.
-
 This is the place to start if your question is:
-
-- What does human authorship look like under AI collaboration?
-- How do you preserve voice instead of flattening it?
-- Why is AI detection a shrinking window, and what replaces it?
-- How do sovereignty, provenance, and durable human signals fit together?
-
-Read this first if you want the Taller Shell case, voice-preservation work, provenance problem maps, permanent tells, and authorship-sovereignty framework development.
+	∙	What does human authorship look like under AI collaboration?
+	∙	How do you preserve voice instead of flattening it?
+	∙	Why is AI detection a shrinking window, and what replaces it?
+	∙	How do sovereignty, provenance, and durable human signals fit together?
+	∙	How does voice degrade under collaboration pressure, emotional weight, or fatigue — and how do you detect it?
+	∙	How much authenticated text does it take to establish a reliable voice fingerprint?
+Read this first if you want the Taller Shell case, voice-preservation work, provenance problem maps, permanent tells, voice degradation taxonomy, and authorship-sovereignty framework development.
+Key documents in this repo:
+	∙	analysis/permanent-tells.md — seven architectural properties of human authorship that AI cannot patch
+	∙	analysis/voice-degradation-taxonomy.md — four degradation conditions, classification only: AI collaboration drift, emotional weight, authorial fatigue, collaborative contamination
+	∙	experiments/dimensional-voice-stamp-v01.md — asymmetric verifiability architecture for human voice attestation
+	∙	experiments/rhythm-signature-rebuild-v02.md — anomaly-distribution detection specification for the Dimensional Fidelity Scorer
+	∙	experiments/minimum-viable-corpus-protocol.md — empirical methodology for establishing the minimum authenticated text needed for reliable voice discrimination
 
 ---
 
@@ -102,19 +105,17 @@ Read this first if you are thinking about multi-agent systems, custody, scope, a
 
 ---
 
-### 6. If you want a concrete sovereign-thinking tool  
-## [Negative Space Mapper](https://github.com/richard-porter/negative-space-mapper)
+### 6. If you want a concrete sovereign-thinking tool
 
+Negative Space Mapper
 A standalone tool implementation.
-
 This is the place to start if your question is:
-
-- How do I identify what is missing without having the AI fill it in for me?
-- How do I surface absences while keeping the human in charge of interpretation?
-- What does a sovereignty-preserving diagnostic tool look like in practice?
-
+	∙	How do I identify what is missing without having the AI fill it in for me?
+	∙	How do I surface absences while keeping the human in charge of interpretation?
+	∙	What does a sovereignty-preserving diagnostic tool look like in practice?
+	∙	How do I check whether a voice-critical document shows signs of degradation?
 Read this first if you want a usable example of the tool layer.
-
+Note for authorship and voice work: The Mapper now includes a Voice Degradation Domain extension — a detection domain that activates on voice-critical documents (long-form fiction, memoir, AI-collaborative work under emotional pressure) and flags the absence of characteristic anomalies, register variance, and productive incoherence signals. If you are working in the dimensional-authorship space, the Mapper is a companion instrument to the Voice Degradation Taxonomy.
 ---
 
 ## Recommended Reading Paths
@@ -134,7 +135,7 @@ Start with:
 ### I care about writing, authorship, and preserving human voice
 Start with:
 1. **Dimensional Authorship**
-2. **AI Collaboration Field Guide**
+2. **Negative Space Mapper (Voice Degradation Domain)**
 3. **Safety Ledgers**
 
 ### I care about provenance, delegation, and agent networks
@@ -158,7 +159,7 @@ Read in this order:
 
 - **Frozen Kernel** — deterministic safety architecture for human–AI collaboration  
 - **AI Collaboration Field Guide** — practical operating manual for staying sovereign while using AI  
-- **Dimensional Authorship** — research home for voice, authorship, sovereignty, and provenance under collaboration  
+- **Dimensional Authorship** — research home for voice preservation, degradation taxonomy, authorship sovereignty, and provenance under human–AI collaboration  
 - **Safety Ledgers** — scorecards, indices, and binary tests for AI safeguards  
 - **Trust Chain Protocol** — delegation, custody, and verification architecture for multi-agent systems  
 - **Negative Space Mapper** — a tool that identifies meaningful absences without taking over interpretation
