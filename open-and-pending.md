@@ -64,15 +64,19 @@ This is the single source of truth for outstanding work across all seven reposit
 
 ## 4. Small Edits — Confirmed Pending
 
-|# |Item                                                                         |File                                                                             |Notes                                                                                                   |
-|--|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-|24|SKILL.md — add companion file pointers and activation condition              |frozen-kernel/SKILL.md                                                           |Confirmed yes, verify if done                                                                           |
-|25|frozen-kernel README — add Experiment 0 note in Replication Challenge section|frozen-kernel/README.md                                                          |From sovereignty paradox work                                                                           |
-|26|“Sovereignty Washing” — add to diagnostic vocabulary                         |frozen-kernel/diagnostic-vocabulary.md                                           |From Just Security article                                                                              |
-|27|Proxy attestation for written voice — add as open question                   |dimensional-authorship/ Voice Stamp v0.2 + Voice Degradation Taxonomy Condition 4|From ALS literature proxy banking concept                                                               |
-|28|MVC threshold anchor (400–800 phrases)                                       |dimensional-authorship/minimum-viable-corpus-protocol.md                         |Vocal banking literature calibration reference                                                          |
-|29|“AI sovereignty” terminology collision note                                  |ai-collaboration-field-guide/ or where-to-start                                  |Your ecosystem = individual cognitive authority; dominant policy usage = national infrastructure control|
-|30|Grok/vocabulary framing insight                                              |frozen-kernel/README.md or new addendum                                          |Worth a note or short addendum                                                                          |
+|# |Item                                                                         |File                                                                             |Notes                                                                                                                                                                                                                                                                                                                                           |
+|--|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|24|SKILL.md — add companion file pointers and activation condition              |frozen-kernel/SKILL.md                                                           |Confirmed yes, verify if done                                                                                                                                                                                                                                                                                                                   |
+|25|frozen-kernel README — add Experiment 0 note in Replication Challenge section|frozen-kernel/README.md                                                          |From sovereignty paradox work                                                                                                                                                                                                                                                                                                                   |
+|26|“Sovereignty Washing” — add to diagnostic vocabulary                         |frozen-kernel/diagnostic-vocabulary.md                                           |From Just Security article                                                                                                                                                                                                                                                                                                                      |
+|27|Proxy attestation for written voice — add as open question                   |dimensional-authorship/ Voice Stamp v0.2 + Voice Degradation Taxonomy Condition 4|From ALS literature proxy banking concept                                                                                                                                                                                                                                                                                                       |
+|28|MVC threshold anchor (400–800 phrases)                                       |dimensional-authorship/minimum-viable-corpus-protocol.md                         |Vocal banking literature calibration reference                                                                                                                                                                                                                                                                                                  |
+|29|“AI sovereignty” terminology collision note                                  |ai-collaboration-field-guide/ or where-to-start                                  |Your ecosystem = individual cognitive authority; dominant policy usage = national infrastructure control                                                                                                                                                                                                                                        |
+|30|Grok/vocabulary framing insight                                              |frozen-kernel/README.md or new addendum                                          |Worth a note or short addendum                                                                                                                                                                                                                                                                                                                  |
+|31|Frozen Kernel — positive definition addendum                                 |frozen-kernel/frozen-kernel.md or README                                         |The Kernel governs release, not generation. Positive architectural statement to replace negative-only framing (“not a pre-inference execution layer”). Derived from horology translation session, March 2026.                                                                                                                                   |
+|32|Frozen Kernel — isochronism as named property                                |frozen-kernel/frozen-kernel.md                                                   |Named property: rate stability under varying conditions (urgency, flattery, novelty, fatigue). The named failure modes in diagnostic-vocabulary.md are the mechanism that produces isochronism — they make the governing rate hold regardless of environmental pressure. Derived from horology translation session, March 2026.                 |
+|33|Frozen Kernel — shock jewel layer framing for Personal Knowledge Firewall    |frozen-kernel/frozen-kernel.md or PKF documentation                              |PKF should be explicitly framed as pre-trauma protection for the escapement function (sovereign identity/biographical integrity), not only as an anti-confabulation tool. Protection is designed before the drop, not after. Derived from horology translation session, March 2026.                                                             |
+|34|Frozen Kernel — beat setting as asymmetric sovereignty diagnostic            |frozen-kernel/diagnostic-vocabulary.md or frozen-kernel.md                       |Beat setting: equal skepticism on both sides. Current sovereignty framing covers AI-directed skepticism but has no named diagnostic for the failure where the human is appropriately skeptical of AI output but not of their own enthusiasm or confirmation. Beat setting names that gap. Derived from horology translation session, March 2026.|
 
 -----
 
@@ -80,9 +84,9 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                                                                      |File                          |Notes                       |
 |--|--------------------------------------------------------------------------|------------------------------|----------------------------|
-|31|ecosystem-map-complete.md — add OWASP DSGAI row to Named Gaps table       |ecosystem-map                 |VERIFY — may already be done|
-|32|TCP README — one-liner pointing to owasp-dsgai-mapping.md in OWASP section|trust-chain-protocol/README.md|VERIFY — may already be done|
-|33|BDD Ledger header — one-liner pointing to owasp-dsgai-mapping.md          |safety-ledgers/ BDD Ledger    |VERIFY — may already be done|
+|35|ecosystem-map-complete.md — add OWASP DSGAI row to Named Gaps table       |ecosystem-map                 |VERIFY — may already be done|
+|36|TCP README — one-liner pointing to owasp-dsgai-mapping.md in OWASP section|trust-chain-protocol/README.md|VERIFY — may already be done|
+|37|BDD Ledger header — one-liner pointing to owasp-dsgai-mapping.md          |safety-ledgers/ BDD Ledger    |VERIFY — may already be done|
 
 -----
 
@@ -90,7 +94,7 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                |Waiting On         |Notes                                                                                                                                          |
 |--|--------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-|34|Steven’s TCP v0.7 PR|Steven Kyle Hensley|All staged files ready: tcp-protocol-four-additions-v2.md and tcp-owasp-three-additions-v2.md. Apply 7-step integration sequence when PR lands.|
+|38|Steven’s TCP v0.7 PR|Steven Kyle Hensley|All staged files ready: tcp-protocol-four-additions-v2.md and tcp-owasp-three-additions-v2.md. Apply 7-step integration sequence when PR lands.|
 
 -----
 
@@ -98,8 +102,8 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                                                                                         |Notes                                                                                                    |
 |--|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-|35|Pull NeurIPS 2025 paper — “Memory Injection Attacks on LLM Agents via Query-Only Interaction”|Empirical anchor for BDD-03/DSGAI11 convergence claim. URL: https://neurips.cc/virtual/2025/poster/118152|
-|36|Review 8 DSGAI gap candidates                                                                |DSGAI07, 08, 09 highest priority for new BDD entries or HRP extensions                                   |
+|39|Pull NeurIPS 2025 paper — “Memory Injection Attacks on LLM Agents via Query-Only Interaction”|Empirical anchor for BDD-03/DSGAI11 convergence claim. URL: https://neurips.cc/virtual/2025/poster/118152|
+|40|Review 8 DSGAI gap candidates                                                                |DSGAI07, 08, 09 highest priority for new BDD entries or HRP extensions                                   |
 
 -----
 
@@ -107,11 +111,11 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                                                         |Notes                                                                                         |
 |--|-------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-|37|Living vocabulary standard (OWASP-style, Wikipedia analogy)  |Added to threads, not developed                                                               |
-|38|Experiment 4 — cross-model shared vocabulary governance test |Identified, not drafted                                                                       |
-|39|Human provenance trust model — mapping across six parties    |Deliberately deferred; next document after human-provenance-problem-map.md                    |
-|40|TCP extension / new repo question for identity provenance    |Blocked on #39                                                                                |
-|41|Callum’s 16 named voids — review for content-layer validation|Identify any voids concerning content-layer validation; Ugare & Chandra paper as proposed fill|
+|41|Living vocabulary standard (OWASP-style, Wikipedia analogy)  |Added to threads, not developed                                                               |
+|42|Experiment 4 — cross-model shared vocabulary governance test |Identified, not drafted                                                                       |
+|43|Human provenance trust model — mapping across six parties    |Deliberately deferred; next document after human-provenance-problem-map.md                    |
+|44|TCP extension / new repo question for identity provenance    |Blocked on #43                                                                                |
+|45|Callum’s 16 named voids — review for content-layer validation|Identify any voids concerning content-layer validation; Ugare & Chandra paper as proposed fill|
 
 -----
 
@@ -119,8 +123,8 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                          |Likely Home                  |Notes                                          |
 |--|------------------------------|-----------------------------|-----------------------------------------------|
-|42|Ugare & Chandra synthesis note|ai-collaboration-field-guide/|Sitting in outputs, repo location not confirmed|
-|43|Spikes/sinks synthesis note   |ai-collaboration-field-guide/|Sitting in outputs, repo location not confirmed|
+|46|Ugare & Chandra synthesis note|ai-collaboration-field-guide/|Sitting in outputs, repo location not confirmed|
+|47|Spikes/sinks synthesis note   |ai-collaboration-field-guide/|Sitting in outputs, repo location not confirmed|
 
 -----
 
@@ -128,18 +132,18 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                                 |Blocked On                             |Notes                                                                                     |
 |--|-------------------------------------|---------------------------------------|------------------------------------------------------------------------------------------|
-|44|Temporal Variance Analyzer document  |Mac mini experiment                    |dimensional-authorship/experiments/; specified in rhythm-signature-rebuild open question 6|
-|45|Prosodic Envelope as Governance Layer|Scorer rebuild + MVC Protocol run + #44|Full dependency chain must complete first                                                 |
+|48|Temporal Variance Analyzer document  |Mac mini experiment                    |dimensional-authorship/experiments/; specified in rhythm-signature-rebuild open question 6|
+|49|Prosodic Envelope as Governance Layer|Scorer rebuild + MVC Protocol run + #48|Full dependency chain must complete first                                                 |
 
 -----
 
 ## 11. Mac Mini Experiments
 
-|# |Item                                             |Notes                                                                                                                         |
-|--|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-|46|Adversarial Frozen Kernel probing against Mistral|First local model experiment; no platform safety layer                                                                        |
-|47|Build real Python experiment                     |The one that existed only as fabricated documentation for Acquantaince in January — Framework Fabrication Syndrome origin story|
-|48|Acquantaince conversation on testing           |Run real experiment together → peer review + empirical gate + origin story closure                                            |
+|# |Item                                             |Notes                                                                                                                          |
+|--|-------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+|50|Adversarial Frozen Kernel probing against Mistral|First local model experiment; no platform safety layer                                                                         |
+|51|Build real Python experiment                     |The one that existed only as fabricated documentation for Acquantaince in January — Framework Fabrication Syndrome origin story|
+|52|Acquantaince conversation on testing             |Run real experiment together → peer review + empirical gate + origin story closure                                             |
 
 -----
 
@@ -147,7 +151,7 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                       |Condition                                |Notes                     |
 |--|---------------------------|-----------------------------------------|--------------------------|
-|49|Frozen Kernel redline patch|≥10 live sessions confirm candidate patch|STABLE until threshold met|
+|53|Frozen Kernel redline patch|≥10 live sessions confirm candidate patch|STABLE until threshold met|
 
 -----
 
@@ -155,9 +159,9 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Gate                                        |Status|
 |--|--------------------------------------------|------|
-|50|Formal delegation grammar                   |Open  |
-|51|Empirically validated scope decay thresholds|Open  |
-|52|Lightweight agent identity model            |Open  |
+|54|Formal delegation grammar                   |Open  |
+|55|Empirically validated scope decay thresholds|Open  |
+|56|Lightweight agent identity model            |Open  |
 
 -----
 
@@ -165,7 +169,7 @@ This is the single source of truth for outstanding work across all seven reposit
 
 |# |Item                                                     |Notes                                                                                                                                                                                                                                                                                    |
 |--|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|55|Fine-tune Mistral on Taller Shell Trilogy as voice corpus|~90,000 words of labeled provenance. Use LoRA via llama.cpp or Unsloth. Test output against known sovereign sections vs. AI-assisted sections. Feeds: MVC Protocol threshold validation (item 28), Voice Degradation Taxonomy in reverse (item 13), Temporal Variance Analyzer (item 44).|
+|57|Fine-tune Mistral on Taller Shell Trilogy as voice corpus|~90,000 words of labeled provenance. Use LoRA via llama.cpp or Unsloth. Test output against known sovereign sections vs. AI-assisted sections. Feeds: MVC Protocol threshold validation (item 28), Voice Degradation Taxonomy in reverse (item 13), Temporal Variance Analyzer (item 48).|
 
 ### Experiment Design — Taller Shell Voice Model
 
@@ -195,7 +199,7 @@ Test fine-tuned model against:
 
 - Empirical MVC threshold data for written voice (item 28)
 - Voice Degradation Taxonomy running in reverse (item 13)
-- First concrete input to Temporal Variance Analyzer specification (item 44)
+- First concrete input to Temporal Variance Analyzer specification (item 48)
 - Publishable experiment arc: the corpus that documented Framework Fabrication Syndrome becomes the training data for a local voice model
 
 **Setup required:**
@@ -213,8 +217,8 @@ The Taller Shell was where the ecosystem started — where FFS was first observe
 
 |# |Item                                                                                       |Notes                                                                                                                                                                   |
 |--|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|53|Canonical architecture diagram — three-layer stack (Frozen Kernel → TCP → Human Governance)|Standalone artifact for cold readers. Home: where-to-start/. Format TBD: Mermaid, ASCII, or polished graphic.                                                           |
-|54|where-to-start content audit                                                               |Does it currently orient a cold reader to the full stack, or is it still more invitation than map? ChatGPT “AI Safety Stack” gap analysis is the prompt for this review.|
+|58|Canonical architecture diagram — three-layer stack (Frozen Kernel → TCP → Human Governance)|Standalone artifact for cold readers. Home: where-to-start/. Format TBD: Mermaid, ASCII, or polished graphic.                                                           |
+|59|where-to-start content audit                                                               |Does it currently orient a cold reader to the full stack, or is it still more invitation than map? ChatGPT “AI Safety Stack” gap analysis is the prompt for this review.|
 
 -----
 
@@ -234,6 +238,7 @@ The Taller Shell was where the ecosystem started — where FFS was first observe
 |TCP v0.7 Authority Collapse Mode specification                                            |March 2026 (waiting on Steven’s PR)|
 |Callum Chavez onboarded as adversarial tester                                             |March 2026                         |
 |Mac mini setup complete (Homebrew, Python, Ollama/Mistral, VS Code, all 6 repos cloned)   |March 2026                         |
+|Sovereign Thinking Tools Tool 1 revised to v3.2                                           |March 2026                         |
 
 -----
 
