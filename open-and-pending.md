@@ -138,8 +138,8 @@ This is the single source of truth for outstanding work across all seven reposit
 |# |Item                                             |Notes                                                                                                                         |
 |--|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 |46|Adversarial Frozen Kernel probing against Mistral|First local model experiment; no platform safety layer                                                                        |
-|47|Build real Python experiment                     |The one that existed only as fabricated documentation for Matt Rogers in January — Framework Fabrication Syndrome origin story|
-|48|Matt Rogers conversation at cub scouts           |Run real experiment together → peer review + empirical gate + origin story closure                                            |
+|47|Build real Python experiment                     |The one that existed only as fabricated documentation for Acquantaince in January — Framework Fabrication Syndrome origin story|
+|48|Acquantaince conversation on testing           |Run real experiment together → peer review + empirical gate + origin story closure                                            |
 
 -----
 
@@ -161,7 +161,55 @@ This is the single source of truth for outstanding work across all seven reposit
 
 -----
 
-## 14. where-to-start — Orientation & Architecture
+## 14. Taller Shell Voice Experiment
+
+|# |Item                                                     |Notes                                                                                                                                                                                                                                                                                    |
+|--|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|55|Fine-tune Mistral on Taller Shell Trilogy as voice corpus|~90,000 words of labeled provenance. Use LoRA via llama.cpp or Unsloth. Test output against known sovereign sections vs. AI-assisted sections. Feeds: MVC Protocol threshold validation (item 28), Voice Degradation Taxonomy in reverse (item 13), Temporal Variance Analyzer (item 44).|
+
+### Experiment Design — Taller Shell Voice Model
+
+**Corpus:** Taller Shell Trilogy (~90,000 words)
+**Model:** Mistral 7B (local, Mac mini M4)
+**Method:** LoRA fine-tuning via Unsloth or llama.cpp
+
+**Why this corpus is uniquely suited:**
+The Trilogy is written in your voice through human-AI collaboration where you made all Y-axis sovereign decisions. You know which sections are most purely yours vs. most AI-assisted. ROSETTA already provides the labeling vocabulary. This is a labeled voice corpus, not just a text dump — provenance is documented.
+
+**Three-phase experiment:**
+
+*Phase 1 — Baseline*
+Before fine-tuning: prompt raw Mistral with Taller Shell-style writing prompts. Document output. This is the control — what Mistral sounds like with no voice training.
+
+*Phase 2 — Fine-tuning*
+Feed the full Trilogy via LoRA, starting with the sections most sovereignly yours. Record the minimum corpus size at which voice recognition becomes detectable. This is the empirical MVC threshold test (item 28).
+
+*Phase 3 — Validation*
+Test fine-tuned model against:
+
+- Heavily AI-assisted sections — does the model revert toward generic?
+- Most sovereignly yours sections — does the model hold the voice?
+- Cold reader test: can someone who knows your writing (Matt Rogers? Steven?) identify fine-tuned output as yours vs. generic Mistral?
+
+**What this produces:**
+
+- Empirical MVC threshold data for written voice (item 28)
+- Voice Degradation Taxonomy running in reverse (item 13)
+- First concrete input to Temporal Variance Analyzer specification (item 44)
+- Publishable experiment arc: the corpus that documented Framework Fabrication Syndrome becomes the training data for a local voice model
+
+**Setup required:**
+
+- Install Unsloth: `pip install unsloth`
+- Convert Trilogy to plain text training format
+- One session of technical setup before experiment begins
+
+**The closing of the loop:**
+The Taller Shell was where the ecosystem started — where FFS was first observed, where ROSETTA was born, where grief became governance. Teaching a local model to write in the voice that survived that collaboration is the right first experiment for the Mac mini.
+
+-----
+
+## 15. where-to-start — Orientation & Architecture
 
 |# |Item                                                                                       |Notes                                                                                                                                                                   |
 |--|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
