@@ -12,7 +12,7 @@ Everything here is free, voluntary, and intended to be usable without technical 
 
 ## The Ecosystem at a Glance
 
-This work is organized into six distinct layers:
+This work is organized into seven distinct layers:
 
 1. **Safety architecture** — how to constrain AI behavior before drift begins
 1. **Practical collaboration** — how to work with AI without losing judgment or control
@@ -20,6 +20,7 @@ This work is organized into six distinct layers:
 1. **Measurement and scorecards** — how to test whether safeguards are structurally present
 1. **Trust and provenance** — how delegation, custody, and verification work across agents or systems
 1. **Concrete tools** — operational utilities that support sovereign thinking in practice
+1. **Developmental tools** — judgment-building protocols for practitioners working toward expertise
 
 -----
 
@@ -53,7 +54,7 @@ This is the place to start if your question is:
 - What are the actual failure modes users experience in practice?
 - What tools help me stay oriented, skeptical, and sovereign while working?
 
-Read this first if you want usable methods, diagnostic language, and sovereign thinking tools.
+Read this first if you want usable methods, diagnostic language, and sovereign thinking tools (includes 48 Sovereign Thinking Tools).
 
 -----
 
@@ -136,6 +137,28 @@ Read this first if you want a usable example of the tool layer.
 
 -----
 
+### 7. If you want to build judgment through structured practice
+
+## [Sovereign Thinking Tools](https://github.com/richard-porter/ai-collaboration-field-guide/tree/main/sovereign-thinking-tools)
+
+The developmental tools layer.
+
+This is the place to start if your question is:
+
+- How do I develop the judgment that experience would normally provide?
+- How do I simulate consequence paths before a consequential decision?
+- How do I build the cognitive architecture that senior practitioners have — without waiting decades?
+- What structured protocols exist for pre-decision diagnostics, cascade analysis, and consequence tracing?
+
+Read this first if you want tools that build the practitioner, not just tools that support a single task. The 48-tool index spans cognitive bypass, verification, routing, decision closure, recovery, author profiles, nonprofit governance, logic extension, structural diagnostics, and developmental protocols.
+
+**Key tools in this layer:**
+
+- `tool-47-cascade-failure-detector.md` — pre-decision structural diagnostic for systems assumed to be resilient
+- `tool-48-conrad.md` — consequence simulator for building judgment before experience provides it; includes Black Swan inoculation and the Rehearsal Stop Condition
+
+-----
+
 ## Recommended Reading Paths
 
 ### I just use AI and want to get better at it
@@ -170,6 +193,14 @@ Start with:
 1. **Frozen Kernel**
 1. **Safety Ledgers**
 
+### I want to build judgment and decision-making capacity
+
+Start with:
+
+1. **Sovereign Thinking Tools** (Tool 48: Conrad)
+1. **AI Collaboration Field Guide**
+1. **Frozen Kernel**
+
 ### I want the full conceptual arc
 
 Read in this order:
@@ -180,17 +211,19 @@ Read in this order:
 1. **Safety Ledgers**
 1. **Trust Chain Protocol**
 1. **Negative Space Mapper**
+1. **Sovereign Thinking Tools**
 
 -----
 
 ## One-Sentence Purpose of Each Repo
 
 - **Frozen Kernel** — deterministic safety architecture for human–AI collaboration
-- **AI Collaboration Field Guide** — practical operating manual for staying sovereign while using AI
+- **AI Collaboration Field Guide** — practical operating manual for staying sovereign while using AI (includes 48 Sovereign Thinking Tools)
 - **Dimensional Authorship** — research home for voice preservation, degradation taxonomy, authorship sovereignty, and provenance under human–AI collaboration
 - **Safety Ledgers** — scorecards, indices, and binary tests for AI safeguards
 - **Trust Chain Protocol** — delegation, custody, and verification architecture for multi-agent systems
 - **Negative Space Mapper** — a tool that identifies meaningful absences without taking over interpretation
+- **Sovereign Thinking Tools** — 48 judgment-building protocols spanning cognitive bypass, structural diagnostics, and developmental training
 
 -----
 
@@ -207,6 +240,7 @@ The deeper questions are:
 - How does a human remain sovereign during collaboration?
 - How do we preserve authorship instead of flattening it?
 - How do we make trust, delegation, and provenance legible afterward?
+- How do we build the human judgment that AI collaboration is quietly replacing?
 
 Each repository addresses one part of that larger problem.
 
@@ -220,6 +254,7 @@ Each repository addresses one part of that larger problem.
 - For evaluation: **Safety Ledgers**
 - For multi-agent trust: **Trust Chain Protocol**
 - For a concrete tool: **Negative Space Mapper**
+- For building judgment: **Sovereign Thinking Tools**
 
 -----
 
