@@ -214,6 +214,73 @@ The Trilogy is written in your voice through human-AI collaboration where you ma
 |64|BDGL v0.1 — Behavioral Drift Gradient Layer        |Five-stage gradient G0 through G4. G2/G3 precursor signatures mapped to BDD-01 through BDD-08. False positive detector with three exit vectors (Revert G0 / Hold G1 / Advance G2). Acceleration flags on BDD-05 and BDD-08. Additive above Safety Ledger — does not rebuild. Interactive swim lane artifact produced March 2026. Destination: safety-ledgers/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |65|Sherpa Architecture v0.1 — Runtime Governance Layer|Full formal spec complete. Session-level runtime governance layer loaded from external canonical sources at session open. Read-only, versioned, trigger-based. Three-layer architecture: External (non-compellable) · Sherpa (read-only session instance) · Session Log (append-only). Pack contents: Diagnostic Vocabulary as live pattern matcher · Pattern Registry as trigger library · BDGL Gradient Tracker · Sovereign Tools Index · GC Traversal Triggers · False Positive Filter. Trigger architecture: WHEN→CONSULT→ACT. Escalation protocol: situation brief + sovereign tool recommendations + five-option action menu. Append-only session log with human-gated registry refinement loop. Boundary architecture: inside (autonomous self-correction) / at boundary (escalation) / beyond (external layer governs). Ten open questions flagged — see spec. NSM void pass pending before v0.2. Destination: where-to-start/ or new governance-runtime/ repo|
 
+# Sherpa Architecture — Item 65 Annotation
+
+## Source
+
+Weitzner, “Why Ontologies are Key for Data Governance in the LLM Era,” Timbr.ai / Medium, November 2025
+
+-----
+
+## Pattern Registry Redesign Vocabulary
+
+The Pattern Registry should be described and structured as an **ontology layer**, not a lookup table. Weitzner’s framing is the right design vocabulary for v0.2 work.
+
+Each BDD precursor signature is a **concept** with:
+
+- **Properties** — observable markers, confidence threshold, gradient stage
+- **Relationships** — which diagnostic vocabulary entries it connects to, which sovereign tools address it, which other BDD categories it co-occurs with
+- **Rules** — trigger conditions, response protocols
+- **Lineage** — where the signature originated, what empirical basis it rests on, what the confidence source is
+
+Current Pattern Registry entries are assertions. Adding lineage makes them governed knowledge.
+
+|Entry                                       |Lineage Source                                                                                                                                |
+|--------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+|BDD-05 G2 signature (hedge compression)     |Empirical observation of hedge language compression in session data                                                                           |
+|Sovereignty Washing                         |Bara et al., ETH Zurich Social Brain Sciences lab — prestige cues suppress governance questions only among audiences lacking process knowledge|
+|BDD-08 G3 signature (constraint fabrication)|Framework Fabrication Syndrome origin story — fabricated documentation, January 2026                                                          |
+|BDD-03 G2 signature (boundary testing)      |Callum Chavez adversarial testing observations; NeurIPS 2025 memory injection paper (item 39)                                                 |
+
+Without explicit lineage, the registry is a rule list. With it, it’s a semantic contract the Sherpa can traverse with provenance intact.
+
+-----
+
+## Boundary Architecture Note
+
+Weitzner’s framework assumes the governance layer is **external** to the system being governed — the ontology sits above the data systems and tells them what’s authoritative. He never addresses the circular reasoning problem that arises when the AI is both the governed system and the one consulting the governance layer.
+
+The Sherpa’s read-only, versioned, human-gated session instance is the architectural answer to the problem Weitzner doesn’t ask. Worth noting explicitly in the v0.2 spec as a deliberate extension beyond the enterprise data governance model.
+
+**The extension in one sentence:** Weitzner governs data the AI retrieves. The Sherpa governs behavior the AI produces. The circular reasoning risk is unique to the behavioral case and requires the boundary architecture he doesn’t need.
+
+-----
+
+## Governance Failure Mode Crosswalk
+
+For cold reader orientation in v0.2 — maps Weitzner’s enterprise framing to ecosystem equivalents:
+
+|Weitzner Failure Mode                             |Ecosystem Equivalent                                       |
+|--------------------------------------------------|-----------------------------------------------------------|
+|Mixing authoritative and non-authoritative sources|Provenance Laundering · Sovereignty Washing                |
+|Surfacing outdated definitions                    |Cross-Session Authority Drift                              |
+|Producing answers that break policy               |BDD-08 Constraint Fabrication                              |
+|Inconsistent answers eroding trust                |BDD-05 Certainty Inflation · Framework Fabrication Syndrome|
+
+-----
+
+## Application Notes
+
+**Apply at v0.2** — Pattern Registry structure revision and cold reader framing.
+
+The ontology vocabulary also improves legibility for technical audiences already familiar with Weitzner’s framing. Describing the Pattern Registry as a semantic layer with concepts, relationships, rules, and lineage is more precise than “trigger library” and maps cleanly to enterprise data governance vocabulary those audiences already carry.
+
+**Relationship to GC traversal framework (items 61–63):** The concept reachability traversal tool (item 63) is the operational complement to the ontology framing — traversing from a root concept through all relationship chains is exactly what a well-structured ontology enables. The two items should be noted as complementary in v0.2 architecture documentation.
+
+*Annotation created: March 2026*
+*Apply to: Sherpa Architecture v0.2 — Pattern Registry structure revision*
+*Register: Item 65 annotation — does not create new item*
+
 -----
 
 ## Open Questions — Your Call
