@@ -49,23 +49,24 @@ All three systems:
 
 ### The Six Repositories
 
-|Repository                                                                                    |Layer      |Primary Function                                                                                                       |
-|----------------------------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------|
-|[frozen-kernel](https://github.com/richard-porter/frozen-kernel)                              |Foundation |Deterministic safety layer for single AI sessions. Immutable constraints, honest failure, three-layer architecture.    |
-|[trust-chain-protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol) |Network    |Authorization governance for multi-agent systems. Delegation grammar, scope decay, chain of custody.                   |
-|[adult-mode-safety-ledger](https://github.com/richard-porter/adult-mode-safety-ledger)        |Application|Binary safety scorecard for high-gain AI features. Nine criteria, five platforms evaluated.                            |
-|[ai-collaboration-field-guide](https://github.com/richard-porter/ai-collaboration-field-guide)|Practice   |Human skills for AI collaboration. Diagnostic vocabulary, sovereign thinking tools, starter kit.                       |
-|[dimensional-authorship](https://github.com/richard-porter/dimensional-authorship)            |Evidence   |Case study in human-AI narrative escalation. The Taller Shell Trilogy as empirical foundation.                         |
-|[negative-space-mapper](https://github.com/richard-porter/negative-space-mapper)              |Tool       |Python implementation of Sovereign Thinking Tool 6. Names voids, never fills them. CLI, Claude API wrapper, test suite.|
-|[where-to-start](https://github.com/richard-porter/where-to-start)                            |Entry point|Public hub and routing map for the entire ecosystem.                                                                   |
+|Repository                                                                                    |Layer      |Primary Function                                                                                                                   |
+|----------------------------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------|
+|[frozen-kernel](https://github.com/richard-porter/frozen-kernel)                              |Foundation |Deterministic safety layer for single AI sessions. Immutable constraints, honest failure, three-layer architecture.                |
+|[trust-chain-protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol) |Network    |Authorization governance for multi-agent systems. Delegation grammar, scope decay, chain of custody.                               |
+|[adult-mode-safety-ledger](https://github.com/richard-porter/adult-mode-safety-ledger)        |Application|Binary safety scorecard for high-gain AI features. Nine criteria, five platforms evaluated.                                        |
+|[ai-collaboration-field-guide](https://github.com/richard-porter/ai-collaboration-field-guide)|Practice   |Human skills for AI collaboration. Diagnostic vocabulary, sovereign thinking tools, cross-domain forecasting taxonomy, starter kit.|
+|[dimensional-authorship](https://github.com/richard-porter/dimensional-authorship)            |Evidence   |Case study in human-AI narrative escalation. The Taller Shell Trilogy as empirical foundation.                                     |
+|[negative-space-mapper](https://github.com/richard-porter/negative-space-mapper)              |Tool       |Python implementation of Sovereign Thinking Tool 6. Names voids, never fills them. CLI, Claude API wrapper, test suite.            |
+|[where-to-start](https://github.com/richard-porter/where-to-start)                            |Entry point|Public hub and routing map for the entire ecosystem.                                                                               |
 
 ### Domain Extensions (within adult-mode-safety-ledger)
 
-|Document                       |Domain                        |Criteria                                             |
-|-------------------------------|------------------------------|-----------------------------------------------------|
-|`therapy-mode-safety-ledger.md`|Mental health / therapeutic AI|10 criteria, clinical harm prevention                |
-|`hrbp-ai-safety-framework.md`  |Human resources               |Ulrich four-quadrant model, wrongful termination test|
-|`safe-storyteller-framework.md`|Pediatric / clinical settings |8 criteria, child safety architecture                |
+|Document                                    |Domain                        |Criteria                                                                                                            |
+|--------------------------------------------|------------------------------|--------------------------------------------------------------------------------------------------------------------|
+|`therapy-mode-safety-ledger.md`             |Mental health / therapeutic AI|10 criteria, clinical harm prevention                                                                               |
+|`hrbp-ai-safety-framework.md`               |Human resources               |Ulrich four-quadrant model, wrongful termination test                                                               |
+|`safe-storyteller-framework.md`             |Pediatric / clinical settings |8 criteria, child safety architecture                                                                               |
+|`human-sovereign-collaboration-framework.md`|Authorship provenance         |Three-layer attestation: process evidence, origin evidence, social anchoring. Governs human-AI co-authorship claims.|
 
 ### The Layered Architecture
 
@@ -260,16 +261,20 @@ Three systems, three audiences, three paths:
 
 ## What Doesn’t Exist Yet (Named Gaps)
 
-|Gap                                              |Referenced By                             |Status                                                                |
-|-------------------------------------------------|------------------------------------------|----------------------------------------------------------------------|
-|Clinical validation study (Diagnostic Vocabulary)|Field Guide, three AI models independently|Requires IRB/academic partnership                                     |
-|TCP reference implementation                     |CONTRIBUTING.md                           |Requires systems implementation collaborator                          |
-|Negative Space Mapper as standalone repo         |Governance Toolkit (6 references)         |✅ Built — Python implementation, CLI, Claude API wrapper, test suite  |
-|Talent Calibration Grid nonprofit translation    |Food Pantry Addendum, Carver reference    |Korn Ferry 9-box exists; volunteer/board translation incomplete       |
-|Financial Advice Mode Safety Ledger              |DeepSeek suggestion                       |✅ Built — 10 criteria, FACI scoring, fiduciary architecture           |
-|Legal Analysis Mode Safety Ledger                |DeepSeek suggestion                       |✅ Built — 10 criteria, LACI scoring, unauthorized practice constraints|
-|Formal verification of TCP grammar               |Grok suggestion                           |Requires formal methods collaborator                                  |
-|OWASP DSGAI coverage (8 entries without BDD/HRP mapping)|owasp-dsgai-mapping.md|Backlog — see gap summary|
+|Gap                                                     |Referenced By                             |Status                                                                |
+|--------------------------------------------------------|------------------------------------------|----------------------------------------------------------------------|
+|Clinical validation study (Diagnostic Vocabulary)       |Field Guide, three AI models independently|Requires IRB/academic partnership                                     |
+|TCP reference implementation                            |CONTRIBUTING.md                           |Requires systems implementation collaborator                          |
+|Negative Space Mapper as standalone repo                |Governance Toolkit (6 references)         |✅ Built — Python implementation, CLI, Claude API wrapper, test suite  |
+|Talent Calibration Grid nonprofit translation           |Food Pantry Addendum, Carver reference    |Korn Ferry 9-box exists; volunteer/board translation incomplete       |
+|Financial Advice Mode Safety Ledger                     |DeepSeek suggestion                       |✅ Built — 10 criteria, FACI scoring, fiduciary architecture           |
+|Legal Analysis Mode Safety Ledger                       |DeepSeek suggestion                       |✅ Built — 10 criteria, LACI scoring, unauthorized practice constraints|
+|Formal verification of TCP grammar                      |Grok suggestion                           |Requires formal methods collaborator                                  |
+|OWASP DSGAI coverage (8 entries without BDD/HRP mapping)|owasp-dsgai-mapping.md                    |Backlog — see gap summary                                             |
+
+-----
+
+*v1.1 — March 2026: HSCF added to Domain Extensions (Item 41). Cross-Domain Forecasting Taxonomy added to Field Guide description (Item 42). Item 40 confirmed present (Therapy Mode in Domain Extensions).*
 
 -----
 
