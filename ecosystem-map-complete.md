@@ -1,6 +1,6 @@
 # The Richard Porter Ecosystem — Complete Map
 
-*February 2026*
+*March 2026*
 
 -----
 
@@ -28,7 +28,7 @@ This principle originated in AI safety research and runs without modification th
        ▼           ▼           ▼
   AI SAFETY    GOVERNANCE   SOVEREIGN
   ECOSYSTEM    TOOLKIT      THINKING
-  (6 repos)    (8 docs)     SYSTEM
+  (7 repos)    (8 docs)     SYSTEM
                             (5+ docs)
 ```
 
@@ -39,6 +39,8 @@ All three systems:
 - Are designed for Population = 1 (single practitioner, single session)
 - Follow the same design principle: binary over subjective, survivable over impressive, simple over elegant
 
+The same governance architecture that structures AI session constraints — proscriptive rules established before execution, a human at the head of the authority chain — is what the Carver Policy Governance model prescribes for nonprofit boards. The Mr. Wolff binary diagnostic applies constraint programming logic (hard stops, irreducible requirements) to organizational triage. The architecture is not metaphorical: it is the same three-layer authority model operating at different scales.
+
 -----
 
 ## System 1: AI Safety Ecosystem
@@ -47,19 +49,19 @@ All three systems:
 
 **Audience:** AI developers, organizations evaluating AI deployment, security researchers, educators, policymakers.
 
-### The Six Repositories
+### The Seven Repositories
 
-|Repository                                                                                    |Layer      |Primary Function                                                                                                                   |
-|----------------------------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------|
-|[frozen-kernel](https://github.com/richard-porter/frozen-kernel)                              |Foundation |Deterministic safety layer for single AI sessions. Immutable constraints, honest failure, three-layer architecture.                |
-|[trust-chain-protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol) |Network    |Authorization governance for multi-agent systems. Delegation grammar, scope decay, chain of custody.                               |
-|[adult-mode-safety-ledger](https://github.com/richard-porter/adult-mode-safety-ledger)        |Application|Binary safety scorecard for high-gain AI features. Nine criteria, five platforms evaluated.                                        |
-|[ai-collaboration-field-guide](https://github.com/richard-porter/ai-collaboration-field-guide)|Practice   |Human skills for AI collaboration. Diagnostic vocabulary, sovereign thinking tools, cross-domain forecasting taxonomy, starter kit.|
-|[dimensional-authorship](https://github.com/richard-porter/dimensional-authorship)            |Evidence   |Case study in human-AI narrative escalation. The Taller Shell Trilogy as empirical foundation.                                     |
-|[negative-space-mapper](https://github.com/richard-porter/negative-space-mapper)              |Tool       |Python implementation of Sovereign Thinking Tool 6. Names voids, never fills them. CLI, Claude API wrapper, test suite.            |
-|[where-to-start](https://github.com/richard-porter/where-to-start)                            |Entry point|Public hub and routing map for the entire ecosystem.                                                                               |
+|Repository                                                                                    |Layer      |Primary Function                                                                                                                                                                                         |
+|----------------------------------------------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|[frozen-kernel](https://github.com/richard-porter/frozen-kernel)                              |Foundation |Deterministic safety layer for single AI sessions. Immutable constraints, honest failure, three-layer architecture. Also home to the IGL (Interpretive Governance Layer) and Sherpa (runtime governance).|
+|[trust-chain-protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol) |Network    |Authorization governance for multi-agent systems. Delegation grammar, scope decay, chain of custody.                                                                                                     |
+|[safety-ledgers](https://github.com/richard-porter/safety-ledgers)                            |Detection  |Binary safety criteria (BDD Ledger, Ledgers 1–3) and runtime gradient specification (BDGL). The empirical record of adversarial testing lives here.                                                      |
+|[ai-collaboration-field-guide](https://github.com/richard-porter/ai-collaboration-field-guide)|Practice   |Human skills for AI collaboration. Diagnostic vocabulary, sovereign thinking tools, cross-domain forecasting taxonomy, starter kit.                                                                      |
+|[dimensional-authorship](https://github.com/richard-porter/dimensional-authorship)            |Evidence   |Case study in human-AI narrative escalation. The Taller Shell Trilogy as empirical foundation.                                                                                                           |
+|[negative-space-mapper](https://github.com/richard-porter/negative-space-mapper)              |Tool       |Python implementation of Sovereign Thinking Tool 6. Names voids, never fills them. CLI, Claude API wrapper, test suite.                                                                                  |
+|[where-to-start](https://github.com/richard-porter/where-to-start)                            |Entry point|Public hub and routing map for the entire ecosystem.                                                                                                                                                     |
 
-### Domain Extensions (within adult-mode-safety-ledger)
+### Domain Extensions (within safety-ledgers)
 
 |Document                                    |Domain                        |Criteria                                                                                                            |
 |--------------------------------------------|------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -68,21 +70,46 @@ All three systems:
 |`safe-storyteller-framework.md`             |Pediatric / clinical settings |8 criteria, child safety architecture                                                                               |
 |`human-sovereign-collaboration-framework.md`|Authorship provenance         |Three-layer attestation: process evidence, origin evidence, social anchoring. Governs human-AI co-authorship claims.|
 
-### The Layered Architecture
+### The Full Governance Stack
+
+The architecture has five layers. Each layer has a defined function. No downstream layer can override what was established upstream.
 
 ```
-Multi-Agent Networks        → Trust Chain Protocol
-        │
-Single AI Sessions          → Frozen Kernel
-        │
-High-Gain Domains           → Adult Mode / Therapy / HR / Pediatric Ledgers
-        │
-Human Practice              → AI Collaboration Field Guide
-        │
-Evidence Base               → Dimensional Authorship
-        │
-Public Entry                → Where to Start
+Human Author          — Moral ownership. Source of sovereign authority.
+      ↓ establishes
+Frozen Kernel         — Legislative. Proscriptive constraints before execution.
+      ↓ governs
+IGL                   — Judicial. Reasonableness standard; three-zone routing.
+      ↓ consumes readings from
+BDGL                  — Detection. G0–G4 gradient; precursor signatures.
+      ↓ observes
+Session / Agent       — Executive. Operates freely within Kernel constraints.
 ```
+
+Sherpa is the runtime enforcement layer — it carries the governance specifications into every live session, maintains real-time gradient position, and triggers SAFE_PAUSE at Zone 3. It does not generate; it governs.
+
+For the full technical diagram, see [`canonical-architecture-diagram.md`](https://github.com/richard-porter/where-to-start/blob/main/canonical-architecture-diagram.md).
+
+### Empirical Foundation
+
+The governance architecture is not purely theoretical. The Experiment 58 series (March 2026) is the first controlled adversarial testing record in the ecosystem: four attack categories, three architectural configurations, twelve probe results. The central finding — a model that recites constraints is not a model that is bound by them — is the empirical anchor for the Frozen Kernel’s core claim that safety must be architectural. Full record in `safety-ledgers/bdd-ledger-v7.md`, Observations 001–013.
+
+External validation: the MINJA paper (Dong et al., NeurIPS 2025, arXiv:2503.03704) independently confirms the same failure mode at the memory layer. The Anthropic distillation attack report (February 2026) confirms it at the model lineage level.
+
+### Collaborators
+
+This ecosystem is developed by a single practitioner but is not unreviewed. Steven Kyle Hensley (GitHub: QueBallSharken) built the DTPE/IAL/SPECTRE prototype validating TCP boundary recomputation behavior. Callum Chavez (MSc Cyber Security) is the adversarial tester; his scope covers G2 precursor signature probing and Sherpa adversarial testing. Matt Rogers (SaaS/AI architect) is the planned peer reviewer. Contributions and issues are open in each repository.
+
+### Reading Paths
+
+**Technical audience (AI developers, security researchers, peer reviewers):**
+Canonical Architecture Diagram → BDD Ledger → BDGL → IGL → TCP → where-to-start
+
+**Practitioner audience (organizations evaluating AI deployment, HR, governance):**
+where-to-start → AI Collaboration Field Guide → Adult Mode / Therapy Mode / HRBP Ledgers → Frozen Kernel
+
+**Academic audience:**
+OWASP DSGAI mapping → BDD Ledger → Experiment 58 series → TCP → Frozen Kernel
 
 -----
 
@@ -203,8 +230,8 @@ FROZEN KERNEL (Core)
 │
 ├── AI Safety Ecosystem
 │   ├── Addresses: AI behavioral failure, agentic risk, clinical harm
-│   ├── Tools: Frozen Kernel, TCP, Safety Ledgers, Field Guide
-│   └── Evidence: Dimensional Authorship (Taller Shell Trilogy)
+│   ├── Tools: Frozen Kernel, TCP, Safety Ledgers, IGL, BDGL, Sherpa, Field Guide
+│   └── Evidence: Experiment 58 series; MINJA (NeurIPS 2025); Dimensional Authorship
 │
 ├── Nonprofit Governance Toolkit
 │   ├── Addresses: Governance failure, people fragility, compliance risk
@@ -241,9 +268,9 @@ All three systems draw from the same source base:
 
 **Clinical Accreditation:** JCAHO/Joint Commission standards → Governance Audit methodology → Binary safety ledgers → Clinical harm prevention criteria
 
-**Organizational Development:** Ulrich HRBP model → HR Safety Framework; Kotter change model → Nonprofit Change Management; Carver Policy Governance → Board structure reference; Lominger/Korn Ferry → Food Pantry competency mapping
+**Organizational Development:** Ulrich HRBP model → HR Safety Framework; Kotter change model → Nonprofit Change Management; Carver Policy Governance → Board structure reference and IGL governance theory; Lominger/Korn Ferry → Food Pantry competency mapping
 
-**AI Safety Research:** Østergaard, Sakata (AI-induced psychosis) → Clinical citations in Frozen Kernel; Anthropic agentic misalignment research → Field Guide Master Principle; Jacob et al. (inference budgets) → Bounded rationality section
+**AI Safety Research:** Østergaard, Sakata (AI-induced psychosis) → Clinical citations in Frozen Kernel; Anthropic agentic misalignment research → Field Guide Master Principle; Jacob et al. (inference budgets) → Bounded rationality section; Dong et al. MINJA (NeurIPS 2025) → BDD-03/DSGAI11 empirical anchor
 
 -----
 
@@ -251,7 +278,7 @@ All three systems draw from the same source base:
 
 Three systems, three audiences, three paths:
 
-**AI Safety Ecosystem** — GitHub (live), OWASP community (see owasp-dsgai-mapping.md), academic track: clinical arm → JMIR/Schizophrenia Bulletin; technical arm → FAccT/AAAI/arXiv; human factors arm → CHI
+**AI Safety Ecosystem** — GitHub (live), OWASP community (see owasp-dsgai-mapping.md and TCP OWASP ASI mapping), academic track: clinical arm → JMIR/Schizophrenia Bulletin; technical arm → FAccT/AAAI/arXiv; human factors arm → CHI
 
 **Nonprofit Governance Toolkit** — Currently unpublished as a system. Natural home: BoardSource, Candid (formerly GuideStar), or direct distribution to nonprofit capacity-building organizations. The Mr. Wolff one-pager is the public entry point.
 
@@ -271,8 +298,12 @@ Three systems, three audiences, three paths:
 |Legal Analysis Mode Safety Ledger                       |DeepSeek suggestion                       |✅ Built — 10 criteria, LACI scoring, unauthorized practice constraints|
 |Formal verification of TCP grammar                      |Grok suggestion                           |Requires formal methods collaborator                                  |
 |OWASP DSGAI coverage (8 entries without BDD/HRP mapping)|owasp-dsgai-mapping.md                    |Backlog — see gap summary                                             |
+|Sovereignty Index — BDGL G2/G3 correlation map          |Item 86                                   |Not yet completed                                                     |
+|Cross-session drift (memory-assisted systems)           |BDD Ledger Open Question 1                |Ledger 4 scoping decision pending                                     |
 
 -----
+
+*v1.2 — March 2026: Full governance stack added (IGL, BDGL, Sherpa). Canonical architecture diagram referenced. `safety-ledgers` added as seventh repo. Empirical foundation section added (Experiment 58 series, MINJA, Anthropic distillation). Collaborator layer added. Reading paths added. OWASP community added to publishing section. Three-system connection diagram updated. Carver/IGL link added to intellectual lineage.*
 
 *v1.1 — March 2026: HSCF added to Domain Extensions (Item 41). Cross-Domain Forecasting Taxonomy added to Field Guide description (Item 42). Item 40 confirmed present (Therapy Mode in Domain Extensions).*
 
@@ -280,6 +311,6 @@ Three systems, three audiences, three paths:
 
 *One practitioner. Three systems. One spine.*
 
-*The Frozen Kernel keeps you safe.*  
-*The tools help you think clearly inside the safe space.*  
+*The Frozen Kernel keeps you safe.*
+*The tools help you think clearly inside the safe space.*
 *Show up. Fix what’s broken. Leave.*
