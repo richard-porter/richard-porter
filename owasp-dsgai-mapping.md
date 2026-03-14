@@ -105,7 +105,13 @@ Outside current HRP and BDD scope. Candidate future primitive: channel boundary 
 Factual Grounding (HRP-1) governs synthetic data presentation confidence registers. No BDD entry covers anonymization failure as a behavioral signal. Adjacent to the honest failure principle: a system that presents synthetic data with the confidence register of ground truth has failed HRP-1.
 
 **DSGAI11 — Cross-Context & Multi-User Conversation Bleed**
-**Primary convergence point.** BDD-03 (Cross-Session Drift Isolation) is the direct structural match: prior session state propagating into initialization IS conversation bleed, named from two disciplines. CVE-2025-6515 (MCP SSE endpoint returning non-unique session IDs) is the CVE instantiation of the BDD-03 FAIL condition. The NeurIPS 2025 “Memory Injection Attacks on LLM Agents via Query-Only Interaction” paper is an empirical cousin to the Byzantine prompt contamination experiment. OWASP’s Tier 2 “fine-grained authorization on retrieval and context construction, decisions made at query time” is the operational description of what TCP’s boundary recomputation axiom enforces formally.
+**Primary convergence point.** BDD-03 (Cross-Session Drift Isolation) is the direct structural match: prior session state propagating into initialization IS conversation bleed, named from two disciplines. CVE-2025-6515 (MCP SSE endpoint returning non-unique session IDs) is the CVE instantiation of the BDD-03 FAIL condition. OWASP’s Tier 2 “fine-grained authorization on retrieval and context construction, decisions made at query time” is the operational description of what TCP’s boundary recomputation axiom enforces formally.
+
+**MINJA empirical anchor (NeurIPS 2025):** The Memory INJection Attack (Dong et al., arXiv:2503.03704, NeurIPS 2025) is the primary external empirical confirmation of the BDD-03 / DSGAI11 convergence claim. MINJA demonstrates that an attacker can inject malicious records into an LLM agent’s memory bank through query-only interaction — without direct access to the memory store. Injected records surface during later retrieval and elicit harmful reasoning steps when a victim query is processed. Reported injection success rates exceed 95% against production agents across diverse architectures. This is the memory-layer instantiation of the BDD-03 failure mode: prior session state — whether accumulated behavioral drift or injected malicious content — propagates into session initialization through the memory retrieval layer. A session that initializes from a poisoned memory bank cannot pass BDD-03 regardless of how accurately it retrieves or recites its constraints. The structural diagnosis is identical to the Experiment 58 series finding: context is not architecture. Safety must be architectural. Convergence with Provenance Laundering: once injected content is embedded in long-term memory, it influences future behavior in ways that are temporally decoupled from the original input — individual interactions appear legitimate while the aggregate pipeline is compromised.
+
+Citation: Dong, S., Xu, S., He, P., Li, Y., Tang, J., Liu, T., Liu, H., & Xiang, Z. (2025). Memory Injection Attacks on LLM Agents via Query-Only Interaction. NeurIPS 2025. arXiv:2503.03704. https://neurips.cc/virtual/2025/poster/118152
+
+**Gap remaining:** BDGL gradient model currently covers within-session drift only — cross-session gradient propagation via poisoned memory is an open architectural question. See BDGL Open Question 3 and BDD Ledger Open Question 1.
 
 **DSGAI12 — Unsafe Natural-Language Data Gateways (LLM-to-SQL/Graph)**
 Natural language gateways are premise injection surfaces. BDD-06 narrative lock detection is the behavioral control; TCP Resource Bounds in the Delegation Grammar are the structural control. RAG is itself a natural language data gateway — the empirical finding that RAG degrades safety alignment (An et al., Goh et al.) is directly relevant here.
@@ -184,12 +190,12 @@ The TCP repo already contains an OWASP ASI Top 10 mapping. Together, the ASI map
 
 ## Version
 
-v1.0 — March 2026
+v1.1 — March 2026. MINJA empirical anchor added to DSGAI11 (Item 44). Full citation: Dong et al., NeurIPS 2025, arXiv:2503.03704.
 
-Built from: OWASP DSGAI 2026 draft (DSGAI04, DSGAI06, DSGAI11 reviewed in full; all 21 TOC entries); TCP README v0.6; Frozen Kernel README; HRP Taxonomy Draft v1; BDD Ledger Draft 2026-03-02; Reviewer Briefing v1.0.
+v1.0 — March 2026. Built from: OWASP DSGAI 2026 draft (DSGAI04, DSGAI06, DSGAI11 reviewed in full; all 21 TOC entries); TCP README v0.6; Frozen Kernel README; HRP Taxonomy Draft v1; BDD Ledger Draft 2026-03-02; Reviewer Briefing v1.0.
 
 **Next actions:**
 
 - Review gap candidates (DSGAI07, DSGAI08, DSGAI09) against open BDD/HRP extension backlog
 - Cross-reference BDD-03 / DSGAI11 / CVE-2025-6515 convergence as lead citation in TCP publication work
-- Pull NeurIPS 2025 “Memory Injection Attacks” paper — empirical support for DSGAI11 / BDD-03 convergence claim
+- ~Pull NeurIPS 2025 “Memory Injection Attacks” paper — empirical support for DSGAI11 / BDD-03 convergence claim~ **Done. Item 44 closed. See DSGAI11 notes above.**
