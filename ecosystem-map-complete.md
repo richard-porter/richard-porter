@@ -54,7 +54,7 @@ The same governance architecture that structures AI session constraints — pros
 |Repository                                                                                    |Layer      |Primary Function                                                                                                                                                                                         |
 |----------------------------------------------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |[frozen-kernel](https://github.com/richard-porter/frozen-kernel)                              |Foundation |Deterministic safety layer for single AI sessions. Immutable constraints, honest failure, three-layer architecture. Also home to the IGL (Interpretive Governance Layer) and Sherpa (runtime governance).|
-|[trust-chain-protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol) |Network    |Authorization governance for multi-agent systems. Delegation grammar, scope decay, chain of custody.                                                                                                     |
+|[trust-chain-protocol](https://github.com/richard-porter/richard-porter-trust-chain-protocol) |Network    |Authorization governance for multi-agent systems. Delegation grammar, scope decay, chain of custody, Continuity Protocol.                                                                                |
 |[safety-ledgers](https://github.com/richard-porter/safety-ledgers)                            |Detection  |Binary safety criteria (BDD Ledger, Ledgers 1–3) and runtime gradient specification (BDGL). The empirical record of adversarial testing lives here.                                                      |
 |[ai-collaboration-field-guide](https://github.com/richard-porter/ai-collaboration-field-guide)|Practice   |Human skills for AI collaboration. Diagnostic vocabulary, sovereign thinking tools, cross-domain forecasting taxonomy, starter kit.                                                                      |
 |[dimensional-authorship](https://github.com/richard-porter/dimensional-authorship)            |Evidence   |Case study in human-AI narrative escalation. The Taller Shell Trilogy as empirical foundation.                                                                                                           |
@@ -92,9 +92,19 @@ For the full technical diagram, see [`canonical-architecture-diagram.md`](https:
 
 ### Empirical Foundation
 
-The governance architecture is not purely theoretical. The Experiment 58 series (March 2026) is the first controlled adversarial testing record in the ecosystem: four attack categories, three architectural configurations, twelve probe results. The central finding — a model that recites constraints is not a model that is bound by them — is the empirical anchor for the Frozen Kernel’s core claim that safety must be architectural. Full record in `safety-ledgers/bdd-ledger-v7.md`, Observations 001–013.
+The governance architecture is not purely theoretical. The Experiment 58 series (March 2026) is the first controlled adversarial testing record in the ecosystem: four attack categories, three architectural configurations, twelve probe results. The central finding — a model that recites constraints is not a model that is bound by them — is the empirical anchor for the Frozen Kernel’s core claim that safety must be architectural. Full record in `safety-ledgers/bdd-ledger-v9.md`, Observations 001–013.
 
 External validation: the MINJA paper (Dong et al., NeurIPS 2025, arXiv:2503.03704) independently confirms the same failure mode at the memory layer. The Anthropic distillation attack report (February 2026) confirms it at the model lineage level.
+
+**External literature alignment (2026):**
+
+Three 2026 papers independently confirm and extend the ecosystem’s architectural claims:
+
+Ugare & Chandra (arXiv:2603.01896) demonstrate that unstructured chain-of-thought allows semantic confabulation that structural certification (SFR) prevents — confirming the content-layer complement to TCP’s authorization-layer coverage and providing a concrete mechanism for the ASI01 gap.
+
+Lanham (Medium, February 2026) describes production model routing infrastructure that operates as undocumented delegation without scope constraints, boundary conditions, or audit records — the precise gap TCP’s Delegation Grammar formalizes, now visible in deployed production systems.
+
+The “From Spikes to Sinks” mechanistic analysis provides weight-level evidence that models develop implicit workarounds through optimization pressure in the absence of explicit mechanism — the fifth and qualitatively strongest confirmation of the Frozen Kernel’s foundational architectural claim.
 
 ### Collaborators
 
@@ -264,13 +274,17 @@ All three systems draw from the same source base:
 
 **Constraint Programming:** Borning’s ThingLab (1981) → Handbook of Constraint Programming → Frozen Kernel three-layer architecture → Mr. Wolff binary diagnostic → Sovereign Thinking constraint protocols
 
+**Industrial Engineering (MTM):** Maynard, Stegemerten & Schwab (1948) Methods-Time Measurement → HRP Taxonomy decomposition logic (irreducibility, exhaustiveness, observability, polarity) → BDD Ledger binary tests → BDGL precursor signatures
+
+**Promise Theory / Semantic Spacetime (Burgess):** Burgess & Bergstra (2014/2019) Promise Theory → Frozen Kernel non-compellability principle; Burgess SST geometry-over-ontology → proscriptive constraint architecture over RLHF rule lists; TCP Chain of Custody as promise architecture
+
 **Enterprise HR Methodology:** Rolls-Royce process engineering → 60+ Visio process maps → Nonprofit translation methodology → Cause-agnostic governance toolkit
 
 **Clinical Accreditation:** JCAHO/Joint Commission standards → Governance Audit methodology → Binary safety ledgers → Clinical harm prevention criteria
 
-**Organizational Development:** Ulrich HRBP model → HR Safety Framework; Kotter change model → Nonprofit Change Management; Carver Policy Governance → Board structure reference and IGL governance theory; Lominger/Korn Ferry → Food Pantry competency mapping
+**Organizational Development:** Ulrich HRBP model → HR Safety Framework; Kotter change model → Nonprofit Change Management; Carver Policy Governance → Board structure reference and IGL governance theory (v0.4); Lominger/Korn Ferry → Food Pantry competency mapping
 
-**AI Safety Research:** Østergaard, Sakata (AI-induced psychosis) → Clinical citations in Frozen Kernel; Anthropic agentic misalignment research → Field Guide Master Principle; Jacob et al. (inference budgets) → Bounded rationality section; Dong et al. MINJA (NeurIPS 2025) → BDD-03/DSGAI11 empirical anchor
+**AI Safety Research:** Østergaard, Sakata (AI-induced psychosis) → Clinical citations in Frozen Kernel; Anthropic agentic misalignment research → Field Guide Master Principle; Jacob et al. (inference budgets) → Bounded rationality section; Dong et al. MINJA (NeurIPS 2025) → BDD-03/DSGAI11 empirical anchor; Ugare & Chandra arXiv:2603.01896 (SFR) → TCP ASI01 content-layer complement; Lanham (Medium Feb 2026) → TCP Delegation Grammar production analog; “From Spikes to Sinks” (2026) → fifth convergent structural finding; Liao et al. T3RL (arXiv:2603.02203, March 2026) → Governance Non-Participation Principle / Sherpa non-generative design
 
 -----
 
@@ -288,20 +302,24 @@ Three systems, three audiences, three paths:
 
 ## What Doesn’t Exist Yet (Named Gaps)
 
-|Gap                                                     |Referenced By                             |Status                                                                |
-|--------------------------------------------------------|------------------------------------------|----------------------------------------------------------------------|
-|Clinical validation study (Diagnostic Vocabulary)       |Field Guide, three AI models independently|Requires IRB/academic partnership                                     |
-|TCP reference implementation                            |CONTRIBUTING.md                           |Requires systems implementation collaborator                          |
-|Negative Space Mapper as standalone repo                |Governance Toolkit (6 references)         |✅ Built — Python implementation, CLI, Claude API wrapper, test suite  |
-|Talent Calibration Grid nonprofit translation           |Food Pantry Addendum, Carver reference    |Korn Ferry 9-box exists; volunteer/board translation incomplete       |
-|Financial Advice Mode Safety Ledger                     |DeepSeek suggestion                       |✅ Built — 10 criteria, FACI scoring, fiduciary architecture           |
-|Legal Analysis Mode Safety Ledger                       |DeepSeek suggestion                       |✅ Built — 10 criteria, LACI scoring, unauthorized practice constraints|
-|Formal verification of TCP grammar                      |Grok suggestion                           |Requires formal methods collaborator                                  |
-|OWASP DSGAI coverage (8 entries without BDD/HRP mapping)|owasp-dsgai-mapping.md                    |Backlog — see gap summary                                             |
-|Sovereignty Index — BDGL G2/G3 correlation map          |Item 86                                   |Not yet completed                                                     |
-|Cross-session drift (memory-assisted systems)           |BDD Ledger Open Question 1                |Ledger 4 scoping decision pending                                     |
+|Gap                                                                                    |Referenced By                             |Status                                                                |
+|---------------------------------------------------------------------------------------|------------------------------------------|----------------------------------------------------------------------|
+|Clinical validation study (Diagnostic Vocabulary)                                      |Field Guide, three AI models independently|Requires IRB/academic partnership                                     |
+|TCP reference implementation                                                           |CONTRIBUTING.md                           |Requires systems implementation collaborator                          |
+|Negative Space Mapper as standalone repo                                               |Governance Toolkit (6 references)         |✅ Built — Python implementation, CLI, Claude API wrapper, test suite  |
+|Talent Calibration Grid nonprofit translation                                          |Food Pantry Addendum, Carver reference    |Korn Ferry 9-box exists; volunteer/board translation incomplete       |
+|Financial Advice Mode Safety Ledger                                                    |DeepSeek suggestion                       |✅ Built — 10 criteria, FACI scoring, fiduciary architecture           |
+|Legal Analysis Mode Safety Ledger                                                      |DeepSeek suggestion                       |✅ Built — 10 criteria, LACI scoring, unauthorized practice constraints|
+|Formal verification of TCP grammar                                                     |Grok suggestion                           |Requires formal methods collaborator                                  |
+|OWASP DSGAI coverage (8 entries without BDD/HRP mapping)                               |owasp-dsgai-mapping.md                    |Backlog — see gap summary                                             |
+|Sovereignty Index — BDGL G2/G3 correlation map                                         |Item 86                                   |Not yet completed                                                     |
+|Cross-session drift (memory-assisted systems)                                          |BDD Ledger Open Question 1                |Ledger 4 scoping decision pending                                     |
+|Byzantine prompt contamination experiment (SFR treatment condition + position variable)|ai-collaboration-field-guide/             |Designed, not yet run — see Patches 4a/4b                             |
+|Continuity Protocol empirical validation                                               |Sherpa v0.2 §10.7; TCP v0.8 §6.9          |Theoretical / Architectural — requires autonomous agent deployment    |
 
 -----
+
+*v1.3 — March 2026: External literature alignment paragraph added to Empirical Foundation (Ugare & Chandra SFR, Lanham routing, From Spikes to Sinks — three 2026 confirmations of structural enforcement requirement). BDD Ledger reference updated to v9. TCP reference updated to v0.8 (Continuity Protocol). IGL reference updated to v0.4 (Burgess, Reversibility). MTM lineage branch added to Intellectual Lineage. Burgess lineage branch added (Promise Theory, SST). AI Safety Research lineage expanded with 2026 papers. Named Gaps table updated: Byzantine experiment and Continuity Protocol validation added.*
 
 *v1.2 — March 2026: Full governance stack added (IGL, BDGL, Sherpa). Canonical architecture diagram referenced. `safety-ledgers` added as seventh repo. Empirical foundation section added (Experiment 58 series, MINJA, Anthropic distillation). Collaborator layer added. Reading paths added. OWASP community added to publishing section. Three-system connection diagram updated. Carver/IGL link added to intellectual lineage.*
 
